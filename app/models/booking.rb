@@ -8,6 +8,7 @@ class Booking < ApplicationRecord
 
   delegate :title, :start_date_format, :end_date_format,
            to: :tour_schedule
+  delegate :name, to: :user, prefix: true
 
   scope :by_user_id, ->(id){where user_id: id}
   scope :order_by_status, ->{order :status}

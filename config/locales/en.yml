@@ -101,6 +101,20 @@ en:
       edit: "Edit"
       not_found: "Tour not found"
   admin:
+    bookings:
+      update:
+        success_update: "Successful update"
+        fail_update: "Failly update"
+      booking:
+        confirm_accept: "Are you sure acceting?"
+        accept: "Accept"
+      index:
+        schedule_name: "Schedule name"
+        start_date: "Start date"
+        end_date: "End date"
+        status: "Status"
+        user_name: "Booker name"
+        no_booking_request: "Booking requests history is empty"
     static_pages:
       index:
         no_tours_msg: "No tours found."
@@ -170,3 +184,4 @@ en:
         home: "Home"
         new_tour: "Create tour"
         brand: "Admin"
+        booking_list: "Booking requests"

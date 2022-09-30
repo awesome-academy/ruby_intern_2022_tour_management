@@ -1,0 +1,14 @@
+<tr>
+  <td><%= booking.user_name %></td>
+  <td><%= booking.title %></td>
+  <td><%= booking.start_date_format %></td>
+  <td><%= booking.end_date_format %></td>
+  <td><%= booking.show_status %></td>
+  <% if booking.pending? %>
+    <td><%= link_to t(".accept"), admin_booking_path(id: booking.id,
+                                    status: Settings.booking.status.accept),
+                    data: {confirm: t(".confirm_accept")},
+                    method: :patch %></td>
+    <td><%= link_to t(".cancel"), "#", class: "link-danger" %></td>
+  <% end %>
+</tr>
