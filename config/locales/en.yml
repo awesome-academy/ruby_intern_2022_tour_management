@@ -9,6 +9,8 @@ en:
   static_pages:
     index:
       no_tours_msg: "No tours found."
+  images_count_error: "Total images must greater than "
+  time_schedule_error: "End date must greater than start date"
   pagy:
     nav:
       next: "Next"
@@ -60,7 +62,14 @@ en:
     static_pages:
       index:
         no_tours_msg: "No tours found."
+    shared:
+      error_messages:
+        error: "error"
+        text: "Total"
     tours:
+      create:
+        success_save: "Successful create tour"
+        unsuccess_save: "Unsuccessful creare tour"
       tour:
         comments: "reviews"
         book_now: "Book now"
@@ -74,6 +83,21 @@ en:
         book_now: "Book now"
         edit: "Edit"
         not_found: "Tour not found"
+      new:
+        new_tour: "New tour"
+        title: "Title"
+        description: "Description"
+        active: "active"
+        images: "Images"
+        schedules: "Schedules"
+        add_schedule: "Add schedule"
+        create: "Create"
+      tour_schedules_fields:
+        title: "Title"
+        from: "From"
+        to: "To"
+        remove_schedules: "Remove schedules"
     layouts:
       header:
         home: "Home"
+        new_tour: "Create tour"

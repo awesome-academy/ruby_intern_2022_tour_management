@@ -1,0 +1,33 @@
+<h1 class="text-center"><%= t ".new_tour" %></h1>
+<div class="pl-5">
+  <%= form_for @tour, url: admin_tours_path do |f| %>
+    <%= render "admin/shared/error_messages", object: f.object %>
+
+    <%= f.label :title, t(".title") %>
+    <%= f.text_area :title, class: "form-control" %>
+
+    <%= f.label :description, t(".description") %>
+    <%= f.text_area :description, class: "form-control" %>
+
+    <%= f.label :active, class: "checkbox inline" do %>
+      <%= f.check_box :active %>
+      <span><%= t ".active" %></span>
+    <% end %>
+
+    <%= f.label :images, t(".images"), class: "d-block" %>
+    <%= f.file_field :images, multiple: true %>
+
+    <div>
+      <p><strong><%= t ".schedules" %>:</strong></p>
+      <div id="tour_schedules">
+        <%= f.fields_for :tour_schedules do |schedule| %>
+          <%= render "tour_schedules_fields", f: schedule %>
+        <% end %>
+        <div class="links mt-2">
+          <%= link_to_add_association t(".add_schedule"), f, :tour_schedules, partial: "tour_schedules_fields" %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit t(".create"), class: "btn btn-primary mt-3" %>
+  <% end %>
+</div>

@@ -3,7 +3,7 @@
   <div class="container pt-5 pb-3">
     <div class="row">
       <% if @tours.empty? %>
-        <%= t ".no_tours_found" %>
+        <%= t ".no_tours_msg" %>
       <% else %>
         <%= render @tours %>
       <% end %>
