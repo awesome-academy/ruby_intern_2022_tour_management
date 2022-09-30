@@ -8,3 +8,10 @@ user:
     name_max: 50
     email_max: 255
     password_min: 6
+
+date_time:
+  format: "%F %T"
+
+pagy:
+  tour:
+    number: 6
