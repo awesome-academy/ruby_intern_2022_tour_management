@@ -42,7 +42,7 @@ config/environments/*.local.yml
 
 test/
 vendor/bundle
-spec/
+coverage/
 
 # Ignore application configuration
 /config/application.yml

@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2022_10_18_062437) do
 
-  create_table "active_storage_attachments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_attachments", charset: "utf8mb4", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
     t.bigint "record_id", null: false
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2022_10_18_062437) do
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
   end
 
-  create_table "active_storage_blobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_blobs", charset: "utf8mb4", force: :cascade do |t|
     t.string "key", null: false
     t.string "filename", null: false
     t.string "content_type"
@@ -34,13 +34,13 @@ ActiveRecord::Schema.define(version: 2022_10_18_062437) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "active_storage_variant_records", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "active_storage_variant_records", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "bookings", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "bookings", charset: "utf8mb4", force: :cascade do |t|
     t.integer "status", default: 0
     t.bigint "user_id", null: false
     t.bigint "tour_schedule_id", null: false
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2022_10_18_062437) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "reviews", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "reviews", charset: "utf8mb4", force: :cascade do |t|
     t.text "comment"
     t.bigint "user_id", null: false
     t.bigint "tour_id", null: false
@@ -62,7 +62,7 @@ ActiveRecord::Schema.define(version: 2022_10_18_062437) do
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
-  create_table "tour_schedules", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "tour_schedules", charset: "utf8mb4", force: :cascade do |t|
     t.datetime "start_date"
     t.datetime "end_date"
     t.bigint "tour_id", null: false
@@ -72,15 +72,15 @@ ActiveRecord::Schema.define(version: 2022_10_18_062437) do
     t.index ["tour_id"], name: "index_tour_schedules_on_tour_id"
   end
 
-  create_table "tours", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.text "description"
-    t.text "title"
+  create_table "tours", charset: "utf8mb4", force: :cascade do |t|
+    t.text "description", null: false
+    t.text "title", null: false
     t.boolean "active", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
