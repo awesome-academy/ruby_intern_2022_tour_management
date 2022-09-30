@@ -5,7 +5,7 @@
       <div class="d-flex justify-content-between mb-3">
         <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 <%= t ".day" %></small>
       </div>
-      <a class="h5 text-decoration-none" href="/tours/<%= tour.id %>"><%= tour.title %></a>
+      <%= link_to tour.title, "/tours/#{tour.id}", class: "h5 text-decoration-none" %>
       <div class="border-top mt-4 pt-4">
         <div class="d-flex justify-content-between">
           <%= link_to "#" do %>
@@ -13,7 +13,7 @@
               <i class="fa fa-comment text-primary mr-2"></i>45 <small><%= t ".comments" %></small>
             </h6>
           <% end %>
-          <a href="" class="btn btn-primary mt-1"><%= t ".book_now" %></a>
+          <%= link_to t(".book_now"), "/tour_schedules/#{tour.id}", class: "btn btn-primary mt-1" %>
         </div>
       </div>
     </div>

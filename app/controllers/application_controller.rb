@@ -3,23 +3,24 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   protect_from_forgery with: :exception
+  before_action :previous_request
   before_action :set_locale
   before_action :set_pagy_locale
 
   private
-
   def tour_params
     params.require(:tour).permit(Tour::ALLOWED_PARAMS,
                                  TourSchedule::ALLOWED_PARAMS)
   end
 
   def get_tours
-    @pagy, @tours = pagy Tour.by_id(get_tour_ids).by_title(params[:title]),
-                         items: Settings.pagy.tour.number
+    @pagy, @tours = pagy Tour.by_id(get_tour_ids)
+                             .by_title(params[:title]).actived(true),
+                         items: Settings.pagy.tour.user.number
   end
 
   def get_tour_ids
-    TourSchedule.by_start_date(params[:start_date])
+    TourSchedule.get_from_current_day.by_start_date(params[:start_date])
                 .by_end_date(params[:end_date]).pluck(:tour_id).uniq
   end
 
@@ -38,5 +39,12 @@ class ApplicationController < ActionController::Base
 
   def set_pagy_locale
     @pagy_locale = params[:locale]
+  end
+
+  def previous_request
+    session[:return_to] = request.fullpath if request.get? &&
+                                              controller_name !=
+                                              "user_sessions" &&
+                                              controller_name != "sessions"
   end
 end

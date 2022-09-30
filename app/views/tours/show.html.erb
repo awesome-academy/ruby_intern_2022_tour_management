@@ -28,7 +28,7 @@
             </p>
             <p><%= s.title %></p>
           <% end %>
-          <a href="" class="btn btn-primary mt-1"><%= t ".book_now" %></a>
+          <%= link_to t(".book_now"), "/tour_schedules/#{@tour.id}", class: "btn btn-primary mt-1" %>
         </div>
       </div>
     </div>

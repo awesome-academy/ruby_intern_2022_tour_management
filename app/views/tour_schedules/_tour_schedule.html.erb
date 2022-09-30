@@ -1,0 +1,13 @@
+<tr>
+  <td><%= tour_schedule.title %></td>
+  <td><%= tour_schedule.start_date.strftime Settings.date_time.format %></td>
+  <td><%= tour_schedule.end_date.strftime Settings.date_time.format %></td>
+  <% if current_user && current_user.bookings.any?{|b| b.tour_schedule_id ==
+        tour_schedule.id } %>
+    <td><%= t ".booked" %></td>
+  <% else %>
+    <td><%= link_to t(".book"),
+            {action: :create, controller: :bookings, id: tour_schedule.id},
+            method: :post, class: "btn btn-primary" %></td>
+  <% end %>
+</tr>

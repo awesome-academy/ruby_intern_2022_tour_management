@@ -11,6 +11,38 @@ vi:
       no_tours_msg: "Khong tim thay tour nao."
   images_count_error: "Số ảnh phải lớn hơn "
   time_schedule_error: "Ngày kết thúc phải lớn hơn ngày bắt đầu"
+
+  pending: "Chờ kiểm duyệt"
+  accept: "Đã xác nhận"
+  cancel: "Hủy xác nhận"
+
+  true: "Có"
+  false: "Không"
+
+  bookings:
+    create:
+      not_logged_in: "Hãy đăng nhập trước khi đặt lịch trình"
+      booking_success: "Đã đặt lịch trình"
+      booking_fail: "Bạn không được đặt lịch trình này"
+    show:
+      schedule_name: "Tên"
+      start_date: "Ngày bắt đầu"
+      end_date: "Ngày kết thúc"
+      status: "Trạng thái"
+      error: "Có lỗi xảy ra khi tìm lịch trình của bạn"
+    booking:
+      cancel: "Hủy đặt"
+
+  tour_schedules:
+    show:
+      schedule_name: "Tên tour"
+      start_date: "Ngày bắt đầu"
+      end_date: "Ngày kết thúc"
+      not_found_schedule: "Lịch trình cho tour này không tồn tại"
+    tour_schedule:
+      book: "Đặt lịch trình"
+      booked: "Đã đặt lịch trình"
+
   pagy:
     nav:
       next: "Sau"
@@ -24,6 +56,7 @@ vi:
       log_out: "Đăng xuất"
       new: "Mới"
       popular: "Phổ biến"
+      booked_tours: "Danh sách lịch trình"
     footer:
       services: "Dịch vụ của chúng tôi"
       hotel: "Khách sạn"
@@ -62,6 +95,10 @@ vi:
     static_pages:
       index:
         no_tours_msg: "Khong tim thay tour nao."
+        id: "Mã"
+        title: "Tiêu đề"
+        active: "Hoạt động"
+        created_date: "Ngày tạo"
     shared:
       error_messages:
         error: "lỗi"
@@ -75,6 +112,7 @@ vi:
         book_now: "Đặt ngay"
         edit: "Chỉnh sửa"
         day: "ngày"
+        delete: "Xóa"
       show:
         about: "Chi tiết chuyến đi"
         schedule: "Lịch trình"

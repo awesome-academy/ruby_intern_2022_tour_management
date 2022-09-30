@@ -14,6 +14,7 @@ class TourSchedule < ApplicationRecord
     where "end_date <= ?", end_date if end_date.present?
   end)
   scope :get_from_current_day, ->{where "start_date >= ?", DateTime.now}
+  scope :by_tour_id, ->(id){where tour_id: id}
 
   private
   def validate_time

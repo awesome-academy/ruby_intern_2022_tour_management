@@ -1,0 +1,9 @@
+<tr>
+  <td><%= booking.tour_schedule.title %></td>
+  <td><%= booking.tour_schedule.start_date.strftime Settings.date_time.format %></td>
+  <td><%= booking.tour_schedule.end_date.strftime Settings.date_time.format %></td>
+  <td><%= booking.show_status %></td>
+  <% if booking.pending? %>
+    <td><%= link_to t(".cancel"), "#", class: "text-primary" %></td>
+  <% end %>
+</tr>
