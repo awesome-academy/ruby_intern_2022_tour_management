@@ -5,7 +5,20 @@
       <% if @tours.empty? %>
         <%= t ".no_tours_msg" %>
       <% else %>
-        <%= render @tours %>
+        <table class="table table-hover">
+          <thread class="thead-light">
+            <tr>
+              <td><%= t ".id" %></td>
+              <td><%= t ".title" %></td>
+              <td><%= t ".active" %></td>
+              <td><%= t ".created_date" %></td>
+              <td></td>
+            </tr>
+          </thread>
+          <tbody>
+            <%= render @tours %>
+          </tbody>
+        </table>
       <% end %>
     </div>
   </div>

@@ -17,8 +17,11 @@ class Tour < ApplicationRecord
   scope :by_id, ->(id){where id: id}
   scope :time_desc, ->{order updated_at: :desc}
   scope :by_title, ->(title){where "title LIKE ?", "%#{title}%"}
-  scope :status, ->(status){where(active: status)}
-  scope :actived, ->{where active: true}
+  scope :actived, ->(val){where active: val if val.present?}
+
+  def show_active
+    I18n.t(".#{active}")
+  end
 
   private
   def validate_image

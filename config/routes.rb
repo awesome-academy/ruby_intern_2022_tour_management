@@ -4,7 +4,10 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
+    post "/booking", to: "bookings#create"
+    get "/booking", to: "bookings#show"
     resources :tours, only: %i(index show)
+    resources :tour_schedules, only: :show
     namespace :admin do
       root "static_pages#index"
       resources :tours
