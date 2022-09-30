@@ -6,7 +6,6 @@ import 'bootstrap'
 
 
 require('jquery')
-require('./easing/easing.min')
 
 Rails.start()
 Turbolinks.start()

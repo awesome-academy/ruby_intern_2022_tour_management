@@ -5,6 +5,7 @@ en:
       about: "About"
       tours: "Tours"
       log_in: "Log in"
+      log_out: "Log out"
       new: "New"
       popular: "Popular"
     footer:
@@ -14,3 +15,11 @@ en:
       food: "Food"
       contact: "Contact Us"
       main_page: "This is our main page"
+
+  sessions:
+    new:
+      email: "Email"
+      password: "Password"
+      log_in: "Log in"
+    success: "Successful login"
+    unsuccess_login: "invalid email or password"
