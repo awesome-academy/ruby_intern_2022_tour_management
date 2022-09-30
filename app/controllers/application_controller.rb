@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_tours
-    @pagy, @tours = pagy Tour.by_id(get_tour_ids)
+    @pagy, @tours = pagy Tour.includes(:tour_schedules).by_id(get_tour_ids)
                              .by_title(params[:title]).actived(true),
                          items: Settings.pagy.tour.user.number
   end
@@ -56,5 +56,9 @@ class ApplicationController < ActionController::Base
 
     flash[:danger] = t ".not_logged_in"
     redirect_to login_path
+  end
+
+  def load_booking
+    @booking = Booking.find params[:id]
   end
 end

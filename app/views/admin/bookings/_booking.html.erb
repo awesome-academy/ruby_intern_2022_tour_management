@@ -16,7 +16,10 @@
                                     status: Settings.booking.status.accept),
                     data: {confirm: t(".confirm_accept")},
                     method: :patch, class: "btn btn-success" %>
-      <%= link_to t(".cancel"), "#", class: "btn btn-danger" %>
+      <td><%= link_to t(".cancel"), admin_booking_path(id: booking.id,
+                                    status: Settings.booking.status.cancel),
+                    data: {confirm: t(".confirm_cancel")},
+                    method: :patch, class: "link-danger" %></td>
     </div></td>
   <% end %>
 </tr>

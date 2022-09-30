@@ -41,6 +41,11 @@ vi:
       no_bookings: "Bạn chưa đặt lịch trình nào"
     booking:
       cancel: "Hủy đặt"
+    destroy:
+      success_destroy: "Hủy tour thành công"
+      fail_destroy: "Hủy tour thất bại"
+      not_destroy: "Bạn không thể hủy tour này"
+      not_found: "Không tìm thấy yêu cầu đặt tour"
 
   tour_schedules:
     show:
@@ -185,10 +190,48 @@ vi:
         from: "Từ"
         to: "Đến"
         remove_schedules: "Xóa lịch trình"
+      edit:
+        title: "Chinh sua tour"
+      create:
+        success_save: "Tạo tour thành công"
+        unsuccess_save: "Tạo tour thất bại"
+      update:
+        passed: "Cap nhat tour thanh cong."
+        failed: "Khong the cap nhat tour."
+      destroy:
+        passed: "An tour thanh cong."
+        failed: "Khong the an tour hien tai."
+      find_tour_by_id:
+        failed: "Error: cannot load tour!"
+      tour:
+        comments: "Đánh giá"
+        book_now: "Đặt ngay"
+        edit: "Chỉnh sửa"
+        day: "ngày"
+        delete: "An tour khoi nguoi dung"
+        confirm: "Ban co muon an tour?"
+      show:
+        header: "Thong tin tour"
+        title: "Tieu de: "
+        des: "Mo ta: "
+        status: "Trang thai: "
+        img: "Anh:"
+        about: "Chi tiết chuyến đi"
+        schedule_title: "Lịch trình: "
+        from: "từ: "
+        to: "đến: "
+        book_now: "Đặt ngay"
+        edit: "Chỉnh sửa"
+        not_found: "Không tìm thấy tour"
+        schedules: "Lich trinh hien co:"
+      new:
+        new_tour: "Tạo tour mới"
+        create: "Tạo tour"
     layouts:
       header:
-        tour_list: "Danh sách tour"
         home: "Trang chủ"
         new_tour: "Tạo tour mới"
-        brand: "Quan tri"
         booking_list: "Yêu cầu đặt tour"
+        brand: "Quan tri"
+        log_out: "Đăng xuất"
+        tour_list: "Danh sách tour"
