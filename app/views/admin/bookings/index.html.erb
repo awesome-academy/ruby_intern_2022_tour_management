@@ -1,4 +1,5 @@
 <div class="container pt-5">
+  <%= render "admin/shared/search_booking" %>
   <h5><%= t ".title" %></h5>
   <% if @bookings.present? %>
     <table class="table table-hover">
@@ -15,11 +16,13 @@
           <td></td>
         </tr>
       </thread>
-      <tbody>
+      <tbody id="table-data">
         <%= render @bookings %>
       </tbody>
     </table>
-    <%== pagy_bootstrap_nav @pagy %>
+    <div id="my-pagy">
+      <%== pagy_bootstrap_nav @pagy, remote: true %>
+    </div>
   <% else %>
     <p class="mt-5 text-center"><%= t ".no_booking_request" %></p>
   <% end %>

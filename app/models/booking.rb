@@ -16,6 +16,32 @@ class Booking < ApplicationRecord
     "cancel" => "danger"
   }.freeze
 
+  JOIN_TABLE = [:user, {tour_schedule: :tour}].freeze
+
+  scope :by_user_name, (lambda do |name|
+                          joins(:user)
+                            .where "users.name LIKE ?", "%#{name}%"
+                        end)
+  scope :by_schedule_name, (lambda do |name|
+                              joins(:tour_schedule)
+                                .where("tour_schedules.title LIKE ?",
+                                       "%#{name}%")
+                            end)
+  scope :by_start_date, (lambda do |start_date|
+                           if start_date.present?
+                             joins(:tour_schedule)
+                               .where("tour_schedules.start_date >= ?",
+                                      start_date)
+                           end
+                         end)
+  scope :by_end_date, (lambda do |end_date|
+                         if end_date.present?
+                           joins(:tour_schedule)
+                             .where("tour_schedules.end_date <= ?",
+                                    end_date)
+                         end
+                       end)
+  scope :by_status, ->(status){where status: status if status.present?}
   scope :by_user_id, ->(id){where user_id: id}
   scope :order_by_status, ->{order :status}
 

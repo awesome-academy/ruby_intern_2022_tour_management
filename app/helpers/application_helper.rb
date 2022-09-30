@@ -53,4 +53,8 @@ module ApplicationHelper
             method: :patch, data: {confirm: t(".confirm")},
             class: "link-#{text[1]}"
   end
+
+  def select_options_for_booking
+    Booking.statuses.map{|k, v| [t(".#{k}"), v]}
+  end
 end
