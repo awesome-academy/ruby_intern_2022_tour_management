@@ -59,7 +59,7 @@ class ApplicationController < ActionController::Base
     return if current_user.present?
 
     flash[:danger] = t ".not_logged_in"
-    redirect_to login_path
+    redirect_to new_user_session_path
   end
 
   def load_booking

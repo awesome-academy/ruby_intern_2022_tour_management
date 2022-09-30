@@ -1,4 +1,8 @@
+require "./app/abilities/booking_ability"
+
 class BookingsController < ApplicationController
+  load_and_authorize_resource
+
   before_action :user_logged_in
   before_action :load_booking, only: :destroy
 
@@ -28,5 +32,11 @@ class BookingsController < ApplicationController
     end
 
     redirect_to bookings_path
+  end
+
+  private
+
+  def current_ability
+    @current_ability ||= BookingAbility.new current_user
   end
 end
