@@ -225,7 +225,7 @@ RSpec.describe Admin::ToursController, type: :controller do
       it_behaves_like "update examples"
 
       it "should redirect to admin home" do
-        expect(response).to redirect_to redirect_to admin_root_path
+        expect(response).to redirect_to admin_root_path
       end
     end
   end

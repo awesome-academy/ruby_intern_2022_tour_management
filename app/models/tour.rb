@@ -35,7 +35,6 @@ class Tour < ApplicationRecord
     return if images.count >= Settings.images.total_min
 
     errors.add(:images,
-               "#{I18n.t('.images_count_error')}
-                 #{Settings.images.total_min}")
+               "#{I18n.t('.images_count_error')} #{Settings.images.total_min}")
   end
 end
