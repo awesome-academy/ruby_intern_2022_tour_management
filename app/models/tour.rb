@@ -4,7 +4,10 @@ class Tour < ApplicationRecord
   has_many :tour_schedules, dependent: :destroy
   accepts_nested_attributes_for :tour_schedules, allow_destroy: true
 
-  validates :title, :description, presence: true
+  validates :title, presence: true,
+            length: {maximum: Settings.tour.title.max_length}
+  validates :description, presence: true,
+            length: {maximum: Settings.tour.description.max_length}
   validate :validate_image
 
   ALLOWED_PARAMS = %i(title active).freeze

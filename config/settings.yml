@@ -32,3 +32,17 @@ booking:
   status:
     accept: 1
     cancel: 2
+
+tour_schedule:
+  title:
+    max_length: 200
+
+tour:
+  title:
+    max_length: 200
+  description:
+    max_length: 5000
+
+review:
+  comment:
+    max_length: 7000
