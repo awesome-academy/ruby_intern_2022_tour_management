@@ -1,0 +1,16 @@
+vi:
+  layouts:
+    header:
+      home: "Trang chủ"
+      about: "Chúng tôi"
+      tours: "Các tour"
+      log_in: "Đăng nhập"
+      new: "Mới"
+      popular: "Phổ biến"
+    footer:
+      services: "Dịch vụ của chúng tôi"
+      hotel: "Khách sạn"
+      travel: "Đi lại"
+      food: "Thức ăn"
+      contact: "Liên lạc"
+      main_page: "đây là trang thông tin chính của chúng tôi"

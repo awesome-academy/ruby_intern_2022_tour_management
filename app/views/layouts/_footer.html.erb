@@ -1,0 +1,53 @@
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+  <div class="row pt-5">
+    <div class="col-lg-3 col-md-6 mb-5">
+      <%= link_to "", class: "navbar-brand" do %>
+        <h1 class="text-primary"><span class="text-white">TRAVEL</span>ER</h1>
+      <% end %>
+      <p><%= t ".main_page" %></p>
+      <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">
+        Follow Us
+      </h6>
+      <div class="d-flex justify-content-start">
+        <%= link_to "#", class: "btn btn-outline-primary btn-square mr-2" do %>
+          <i class="fab fa-facebook-f"></i>
+        <% end %>
+        <%= link_to "#", class: "btn btn-outline-primary btn-square mr-2" do %>
+          <i class="fab fa-instagram"></i>
+        <% end %>
+        <%= link_to "#", class: "btn btn-outline-primary btn-square mr-2" do %>
+          <i class="fab fa-youtube"></i>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 mb-5">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">
+        <%= t ".services" %>
+      </h5>
+        <div class="d-flex flex-column justify-content-start">
+          <%= link_to "#", class: "text-white-50" do %>
+              <i class="fa fa-angle-right mr-2"></i><%= t ".hotel"%>
+          <% end %>
+          <%= link_to "#", class: "text-white-50" do %>
+              <i class="fa fa-angle-right mr-2"></i><%= t ".travel"%>
+          <% end %>
+          <%= link_to "#", class: "text-white-50" do %>
+            <i class="fa fa-angle-right mr-2"></i><%= t ".food"%>
+          <% end %>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 mb-5">
+      <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;"><%= t ".contact" %></h5>
+      <p><i class="fa fa-map-marker-alt mr-2"></i><%= Settings.footer.street %></p>
+      <p><i class="fa fa-phone-alt mr-2"></i><%= Settings.footer.phone %></p>
+      <p><i class="fa fa-envelope mr-2"></i><%= Settings.footer.email %></p>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+<!-- Back to Top -->
+<%= link_to "#", class: "btn btn-lg btn-primary btn-lg-square back-to-top" do %>
+  <i class="fa fa-angle-double-up"></i>
+<% end %>

@@ -1,0 +1,16 @@
+en:
+  layouts:
+    header:
+      home: "Home"
+      about: "About"
+      tours: "Tours"
+      log_in: "Log in"
+      new: "New"
+      popular: "Popular"
+    footer:
+      services: "Services"
+      hotel: "Hotel"
+      travel: "Travel"
+      food: "Food"
+      contact: "Contact Us"
+      main_page: "This is our main page"
