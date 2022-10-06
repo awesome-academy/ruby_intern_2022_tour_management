@@ -1,0 +1,60 @@
+<!-- Topbar Start -->
+<div class="container-fluid bg-light pt-3 d-none d-lg-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
+        <div class="d-inline-flex align-items-center">
+          <p><i class="fa fa-envelope mr-2"></i>demo@gmail.com</p>
+          <p class="text-body px-3">|</p>
+          <p><i class="fa fa-phone-alt mr-2"></i>0948495934</p>
+        </div>
+      </div>
+      <div class="col-lg-6 text-center text-lg-right">
+        <div class="d-inline-flex align-items-center">
+          <%= link_to "#", class: "text-primary px-3" do %>
+            <i class="fab fa-facebook-f"></i>
+          <% end %>
+          <%= link_to "#", class: "text-primary px-3" do %>
+            <i class="fab fa-instagram"></i>
+          <% end %>
+          <%= link_to "#", class: "text-primary pl-3" do %>
+            <i class="fab fa-youtube"></i>
+          <% end %>
+          <i class="fa fa-language text-primary px-3">
+            <%= link_to "En  ", locale:"en" %>
+            |<%= link_to "  Vi", locale:"vi" %>
+          </i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Topbar End -->
+<!-- Navbar Start -->
+<div class="container-fluid position-relative nav-bar p-0">
+  <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+      <%= link_to "", class: "navbar-brand" do %>
+        <h1 class="m-0 text-primary"><span class="text-dark">TRAVEL</span>ER</h1>
+      <% end %>
+      <%= button_tag type: "button", class: "navbar-toggler", data: {toggle: "collapse", target: "#navbarCollapse"} do %>
+        <span class="navbar-toggler-icon"></span>
+      <% end %>
+      <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+        <div class="navbar-nav ml-auto py-0">
+          <%= link_to t(".home"), "#", class: "nav-item nav-link active"%>
+          <%= link_to t(".about"), "#", class: "nav-item nav-link"%>
+          <div class="nav-item dropdown">
+            <%= link_to t(".tours"), "#", class: "nav-link dropdown-toggle", data:{toggle: "dropdown"} %>
+            <div class="dropdown-menu border-0 rounded-0 m-0">
+              <%= link_to t(".new"), "#", class: "dropdown-item" %>
+              <%= link_to t(".popular"), "#", class: "dropdown-item" %>
+            </div>
+          </div>
+          <%= link_to t(".log_in"), "#", class: "nav-item nav-link" %>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+<!-- Navbar End -->
