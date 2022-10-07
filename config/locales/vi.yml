@@ -5,6 +5,7 @@ vi:
       about: "Chúng tôi"
       tours: "Các tour"
       log_in: "Đăng nhập"
+      log_out: "Đăng xuất"
       new: "Mới"
       popular: "Phổ biến"
     footer:
@@ -14,3 +15,11 @@ vi:
       food: "Thức ăn"
       contact: "Liên lạc"
       main_page: "đây là trang thông tin chính của chúng tôi"
+
+  sessions:
+    new:
+      email: "Địa chỉ thư"
+      password: "Mật khẩu"
+      log_in: "Đăng nhập"
+    success: "Đăng nhập thành công"
+    unsuccess_login: "Tài khoản hoặc mật khẩu không chính xác"
