@@ -3,6 +3,9 @@ class User < ApplicationRecord
 
   enum role: {nomal: 0, admin: 1}
 
+  has_many :bookings, dependent: :destroy
+  has_many :reviews, dependent: :destroy
+
   validates :name, presence: true,
     length: {maximum: Settings.user.length.name_max}
   validates :email, presence: true, length: {maximum:
