@@ -1,4 +1,8 @@
 vi:
+  pagy:
+    nav:
+      next: "Sau"
+      prev: "Trước"
   layouts:
     header:
       home: "Trang chủ"
@@ -15,6 +19,12 @@ vi:
       food: "Thức ăn"
       contact: "Liên lạc"
       main_page: "đây là trang thông tin chính của chúng tôi"
+    application_admin:
+      title: "Quản lí tour"
+      log_out: "Đăng xuất"
+      log_in: "Đăng nhập"
+    application:
+      title: "Đặt tour"
 
   sessions:
     new:
@@ -23,3 +33,37 @@ vi:
       log_in: "Đăng nhập"
     success: "Đăng nhập thành công"
     unsuccess_login: "Tài khoản hoặc mật khẩu không chính xác"
+
+  tours:
+    tour:
+      comments: "Đánh giá"
+      book_now: "Đặt ngay"
+      edit: "Chỉnh sửa"
+      day: "ngày"
+    show:
+      about: "Chi tiết chuyến đi"
+      schedule: "Lịch trình"
+      from: "Từ"
+      to: "đến"
+      book_now: "Đặt ngay"
+      edit: "Chỉnh sửa"
+      not_found: "Không tìm thấy tour"
+
+  admin:
+    tours:
+      tour:
+        comments: "Đánh giá"
+        book_now: "Đặt ngay"
+        edit: "Chỉnh sửa"
+        day: "ngày"
+      show:
+        about: "Chi tiết chuyến đi"
+        schedule: "Lịch trình"
+        from: "Từ"
+        to: "đến"
+        book_now: "Đặt ngay"
+        edit: "Chỉnh sửa"
+        not_found: "Không tìm thấy tour"
+    layouts:
+      header:
+        home: "Trang chủ"

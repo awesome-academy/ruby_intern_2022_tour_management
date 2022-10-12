@@ -6,8 +6,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate params.dig(:session, :password)
       log_in user
-      flash[:success] = t ".success"
-      redirect_to root_path
+      redirect_log_in user
     else
       flash.now[:danger] = t ".unsuccess_login"
       render :new
@@ -17,5 +16,14 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     redirect_to root_path
+  end
+
+  private
+  def redirect_log_in user
+    if user.admin?
+      redirect_to admin_root_path
+    else
+      redirect_to root_path
+    end
   end
 end

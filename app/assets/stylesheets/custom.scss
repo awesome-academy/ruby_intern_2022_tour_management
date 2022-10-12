@@ -5,6 +5,10 @@
   color: white;
 }
 
+.spacing_letter {
+  letter-spacing: 5px;
+}
+
 #login-page {
   padding-left: 30%;
 
@@ -15,6 +19,10 @@
 
   .btn {
     margin-top: 15px;
-    margin-left: 40%;
+    margin-left: 83%;
   }
+}
+
+.min-height-500 {
+  min-height: 500px;
 }

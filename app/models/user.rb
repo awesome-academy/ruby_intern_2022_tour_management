@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   before_save :downcase_email
 
-  enum role: {nomal: 0, admin: 1}
+  enum role: {normal: 0, admin: 1}
 
   has_many :bookings, dependent: :destroy
   has_many :reviews, dependent: :destroy

@@ -1,4 +1,8 @@
 en:
+  pagy:
+    nav:
+      next: "Next"
+      prev: "Prev"
   layouts:
     header:
       home: "Home"
@@ -15,6 +19,13 @@ en:
       food: "Food"
       contact: "Contact Us"
       main_page: "This is our main page"
+    application_admin:
+      title: "Admin | Tour management"
+      log_out: "Log out"
+      log_in: "Log in"
+    application:
+      title: "Booking tour"
+
 
   sessions:
     new:
@@ -23,3 +34,37 @@ en:
       log_in: "Log in"
     success: "Successful login"
     unsuccess_login: "invalid email or password"
+
+  tours:
+    tour:
+      comments: "reviews"
+      book_now: "Book now"
+      edit: "Edit"
+      day: "days"
+    show:
+      about: "About tour"
+      schedule: "Schedule"
+      from: "From"
+      to: "To"
+      book_now: "Book now"
+      edit: "Edit"
+      not_found: "Tour not found"
+
+  admin:
+    tours:
+      tour:
+        comments: "reviews"
+        book_now: "Book now"
+        edit: "Edit"
+        day: "days"
+      show:
+        about: "About tour"
+        schedule: "Schedule"
+        from: "From"
+        to: "To"
+        book_now: "Book now"
+        edit: "Edit"
+        not_found: "Tour not found"
+    layouts:
+      header:
+        home: "Home"
