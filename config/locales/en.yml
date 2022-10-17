@@ -1,4 +1,14 @@
 en:
+  shared:
+    search:
+      by_title: "Search by title"
+      modal_btn: "Advanced..."
+      modal_title: "Advanced Search"
+      label_active: "Actives tours"
+      submit_btn: "Search"
+  static_pages:
+    index:
+      no_tours_msg: "No tours found."
   pagy:
     nav:
       next: "Next"
@@ -25,8 +35,6 @@ en:
       log_in: "Log in"
     application:
       title: "Booking tour"
-
-
   sessions:
     new:
       email: "Email"
@@ -34,7 +42,6 @@ en:
       log_in: "Log in"
     success: "Successful login"
     unsuccess_login: "invalid email or password"
-
   tours:
     tour:
       comments: "reviews"
@@ -49,8 +56,10 @@ en:
       book_now: "Book now"
       edit: "Edit"
       not_found: "Tour not found"
-
   admin:
+    static_pages:
+      index:
+        no_tours_msg: "No tours found."
     tours:
       tour:
         comments: "reviews"
