@@ -1,7 +1,12 @@
 <div class="container-fluid py-5">
+  <%= render "shared/search" %>
   <div class="container pt-5 pb-3">
     <div class="row">
-      <%= render @tours %>
+      <% if @tours.empty? %>
+        <%= t ".no_tours_found" %>
+      <% else %>
+        <%= render @tours %>
+      <% end %>
     </div>
     <%== pagy_bootstrap_nav @pagy %>
   </div>

@@ -7,6 +7,22 @@ class ApplicationController < ActionController::Base
   before_action :set_pagy_locale
 
   private
+
+  def tour_params
+    params.require(:tour).permit(Tour::ALLOWED_PARAMS,
+                                 TourSchedule::ALLOWED_PARAMS)
+  end
+
+  def get_tours
+    @pagy, @tours = pagy Tour.by_id(get_tour_ids).by_title(params[:title]),
+                         items: Settings.pagy.tour.number
+  end
+
+  def get_tour_ids
+    TourSchedule.by_start_date(params[:start_date])
+                .by_end_date(params[:end_date]).pluck(:tour_id).uniq
+  end
+
   def set_locale
     locale = params[:locale].to_s.strip.to_sym
     I18n.locale = if I18n.available_locales.include?(locale)

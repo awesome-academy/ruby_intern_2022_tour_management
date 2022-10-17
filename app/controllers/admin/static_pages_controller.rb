@@ -1,5 +1,5 @@
 class Admin::StaticPagesController < Admin::BaseController
-  def index
-    @pagy, @tours = pagy Tour.time_desc
-  end
+  before_action :get_tours
+
+  def index; end
 end

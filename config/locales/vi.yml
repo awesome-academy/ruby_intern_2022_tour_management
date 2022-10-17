@@ -1,4 +1,14 @@
 vi:
+  shared:
+    search:
+      by_title: "Tim theo ten"
+      modal_btn: "Nang cao..."
+      modal_title: "Tim kiem nang cao"
+      label_active: "Cac tour co the dang ky"
+      submit_btn: "Tim kiem"
+  static_pages:
+    index:
+      no_tours_msg: "Khong tim thay tour nao."
   pagy:
     nav:
       next: "Sau"
@@ -25,7 +35,6 @@ vi:
       log_in: "Đăng nhập"
     application:
       title: "Đặt tour"
-
   sessions:
     new:
       email: "Địa chỉ thư"
@@ -33,7 +42,6 @@ vi:
       log_in: "Đăng nhập"
     success: "Đăng nhập thành công"
     unsuccess_login: "Tài khoản hoặc mật khẩu không chính xác"
-
   tours:
     tour:
       comments: "Đánh giá"
@@ -48,8 +56,10 @@ vi:
       book_now: "Đặt ngay"
       edit: "Chỉnh sửa"
       not_found: "Không tìm thấy tour"
-
   admin:
+    static_pages:
+      index:
+        no_tours_msg: "Khong tim thay tour nao."
     tours:
       tour:
         comments: "Đánh giá"
