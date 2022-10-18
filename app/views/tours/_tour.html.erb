@@ -4,15 +4,23 @@
     <div class="p-4">
       <div class="d-flex justify-content-between mb-3">
         <small class="m-0"><i class="fa fa-calendar-alt text-primary mr-2"></i>3 <%= t ".day" %></small>
+        <button type="button"
+              class="badge rounded-pill bg-success"
+              data-bs-toggle="modal"
+              data-bs-target="#schedulesModal<%= tour.id %>">
+          <%= t ".schedules_btn" %>
+        </button>
+        <%= render "shared/schedules", tour: tour %>
       </div>
-      <a class="h5 text-decoration-none" href="/tours/<%= tour.id %>"><%= tour.title %></a>
+      <%= link_to tour.title, tour_path(tour.id), class: "h5 text-decoration-none"%>
       <div class="border-top mt-4 pt-4">
         <div class="d-flex justify-content-between">
-          <%= link_to "#" do %>
+          <%= link_to "#cmtModal" + tour.id.to_s, role: "button", "data-bs-toggle": "modal" do %>
             <h6 class="m-0">
-              <i class="fa fa-comment text-primary mr-2"></i>45 <small><%= t ".comments" %></small>
+              <i class="fa fa-comment text-primary mr-2"></i><%= tour.reviews.count %> <small><%= t ".comments" %></small>
             </h6>
           <% end %>
+          <%= render "shared/reviews", tour: tour %>
           <a href="" class="btn btn-primary mt-1"><%= t ".book_now" %></a>
         </div>
       </div>
