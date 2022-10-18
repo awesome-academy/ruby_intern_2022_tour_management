@@ -9,6 +9,8 @@ vi:
   static_pages:
     index:
       no_tours_msg: "Khong tim thay tour nao."
+  images_count_error: "Số ảnh phải lớn hơn "
+  time_schedule_error: "Ngày kết thúc phải lớn hơn ngày bắt đầu"
   pagy:
     nav:
       next: "Sau"
@@ -60,7 +62,14 @@ vi:
     static_pages:
       index:
         no_tours_msg: "Khong tim thay tour nao."
+    shared:
+      error_messages:
+        error: "lỗi"
+        text: "Có"
     tours:
+      create:
+        success_save: "Tạo tour thành công"
+        unsuccess_save: "Tạo tour thất bại"
       tour:
         comments: "Đánh giá"
         book_now: "Đặt ngay"
@@ -74,6 +83,21 @@ vi:
         book_now: "Đặt ngay"
         edit: "Chỉnh sửa"
         not_found: "Không tìm thấy tour"
+      new:
+        new_tour: "Tạo tour mới"
+        title: "Chủ đề"
+        description: "Mô tả"
+        active: "Hoạt động"
+        images: "Ảnh"
+        schedules: "Lịch trình"
+        add_schedule: "Thêm lịch trình"
+        create: "Tạo tour"
+      tour_schedules_fields:
+        title: "Nội dung chuyến đi"
+        from: "Từ"
+        to: "Đến"
+        remove_schedules: "Xóa lịch trình"
     layouts:
       header:
         home: "Trang chủ"
+        new_tour: "Tạo tour mới"
