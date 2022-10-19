@@ -21,7 +21,7 @@
             </h6>
           <% end %>
           <%= render "shared/reviews", tour: tour %>
-          <a href="" class="btn btn-primary mt-1"><%= t ".book_now" %></a>
+          <%= link_to t(".book_now"), tour_schedule_path(tour.id), class: "btn btn-primary mt-1" %>
         </div>
       </div>
     </div>

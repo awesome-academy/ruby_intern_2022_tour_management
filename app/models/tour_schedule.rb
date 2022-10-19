@@ -14,12 +14,21 @@ class TourSchedule < ApplicationRecord
     where "end_date <= ?", end_date if end_date.present?
   end)
   scope :get_from_current_day, ->{where "start_date >= ?", DateTime.now}
+  scope :by_tour_id, ->(id){where tour_id: id}
+
+  def start_date_format
+    start_date.strftime Settings.date_time.format
+  end
+
+  def end_date_format
+    end_date.strftime Settings.date_time.format
+  end
 
   private
   def validate_time
     return if end_date > start_date
 
     errors.add :end_date,
-               I18n.t(".time_schedule_error").to_s
+               I18n.t(".time_schedule_error")
   end
 end

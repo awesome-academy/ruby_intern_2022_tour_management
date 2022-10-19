@@ -29,6 +29,10 @@ class User < ApplicationRecord
     end
   end
 
+  def booked_schedule? schedule_id
+    bookings.any?{|b| b.tour_schedule_id == schedule_id}
+  end
+
   private
   def downcase_email
     email.downcase!

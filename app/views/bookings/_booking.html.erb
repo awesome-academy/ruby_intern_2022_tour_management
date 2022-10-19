@@ -1,0 +1,9 @@
+<tr>
+  <td><%= booking.title %></td>
+  <td><%= booking.start_date_format %></td>
+  <td><%= booking.end_date_format %></td>
+  <td><%= booking.show_status %></td>
+  <% if booking.pending? %>
+    <td><%= link_to t(".cancel"), "#", class: "text-primary" %></td>
+  <% end %>
+</tr>
