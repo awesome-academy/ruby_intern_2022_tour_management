@@ -6,6 +6,10 @@ en:
       modal_title: "Advanced Search"
       label_active: "Actives tours"
       submit_btn: "Search"
+    reviews:
+      title: "Reviews"
+    schedules:
+      title: "Available Schedules"
   static_pages:
     index:
       no_tours_msg: "No tours found."
@@ -50,6 +54,7 @@ en:
       book_now: "Book now"
       edit: "Edit"
       day: "days"
+      schedules_btn: "Available schedules"
     show:
       about: "About tour"
       schedule: "Schedule"

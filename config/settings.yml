@@ -12,6 +12,7 @@ user:
 
 date_time:
   format: "%F %T"
+  cmt_format: "%H:%M, %d/%m/%Y"
 
 pagy:
   tour:

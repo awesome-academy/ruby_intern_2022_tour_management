@@ -24,7 +24,12 @@ end
   title = Faker::Lorem.paragraph(sentence_count: 1)
   active = Faker::Boolean.boolean
 
-  Tour.create!(description: description, title: title, active: active)
+  t = Tour.create(description: description, title: title, active: active)
+  3.times do
+    t.images.attach(io: File.open("app/assets/images/placeimg_640_480_arch.jpg"),
+                    filename: "placeimg_640_480_arch.jpg")
+  end
+  t.save!
 end
 
 20.times do
@@ -34,4 +39,12 @@ end
 
   TourSchedule.create!(tour_id: tour_id, start_date: start_date,
                        end_date: end_date)
+end
+
+30.times do
+  cmt = Faker::Lorem.paragraph(sentence_count: 3)
+  user_id = Faker::Number.between from: 1, to: 10
+  tour_id = Faker::Number.between from: 1, to: 20
+
+  Review.create!(comment: cmt, user_id: user_id, tour_id: tour_id)
 end

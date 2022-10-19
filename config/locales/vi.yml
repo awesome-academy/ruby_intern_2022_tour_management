@@ -6,6 +6,10 @@ vi:
       modal_title: "Tim kiem nang cao"
       label_active: "Cac tour co the dang ky"
       submit_btn: "Tim kiem"
+    reviews:
+      title: "Danh gia"
+    schedules:
+      title: "Lich trinh hien co"
   static_pages:
     index:
       no_tours_msg: "Khong tim thay tour nao."
@@ -50,6 +54,7 @@ vi:
       book_now: "Đặt ngay"
       edit: "Chỉnh sửa"
       day: "ngày"
+      schedules_btn: "Lich trinh hien co"
     show:
       about: "Chi tiết chuyến đi"
       schedule: "Lịch trình"

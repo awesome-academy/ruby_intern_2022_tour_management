@@ -14,7 +14,8 @@ class ApplicationController < ActionController::Base
   end
 
   def get_tours
-    @pagy, @tours = pagy Tour.by_id(get_tour_ids).by_title(params[:title]),
+    @pagy, @tours = pagy Tour.by_title(params[:title])
+                             .includes(:tour_schedules),
                          items: Settings.pagy.tour.number
   end
 
