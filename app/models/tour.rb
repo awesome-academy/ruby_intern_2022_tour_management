@@ -2,7 +2,7 @@ class Tour < ApplicationRecord
   has_many_attached :images
   has_many :reviews, dependent: :destroy
   has_many :tour_schedules, dependent: :destroy
-  accepts_nested_attributes_for :tour_schedules
+  accepts_nested_attributes_for :tour_schedules, allow_destroy: true
 
   validates :title, :description, presence: true
   validate :validate_image
@@ -10,8 +10,8 @@ class Tour < ApplicationRecord
   ALLOWED_PARAMS = %i(title active).freeze
   CREATE_ATTRS = [:description, :title, :active, {images: [],
                                                   tour_schedules_attributes: [
-                                                    :title, :start_date,
-                                                    :end_date
+                                                    :id, :title, :start_date,
+                                                    :end_date, :_destroy
                                                   ]}].freeze
 
   scope :by_id, ->(id){where id: id}

@@ -1,6 +1,6 @@
 <div class="d-flex">
     <%= form_tag(get_path, method: :get, class: "d-flex flex-grow-1") do %>
-      <%= text_field_tag :title, params[:title], class: "form-control p-2 flex-grow-1 h-100", placeholder: t(".by_title") %>
+      <%= text_field_tag :title, params[:title], class: "form-control p-2 flex-grow-1", placeholder: t(".by_title") %>
 
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
         <%= t ".modal_btn" %>
@@ -14,20 +14,20 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <div class="mb-3">
-              <%= label_tag :start_date, nil, class: "form-label" %>
-              <%= date_field_tag :start_date, params[:start_date], class: "form-control" %>
-            </div>
-            <div class="mb-3">
-              <%= label_tag :end_date, nil, class: "form-label" %>
-              <%= date_field_tag :end_date, params[:end_date], class: "form-control" %>
-            </div>
-            <% if current_user&.admin? %>
-            <div class="form-check mb-3">
-              <%= check_box_tag :active, true, checked = false, class: "form-check-input" %>
-              <%= label_tag :active, t(".label_active"), class: "form-check-label" %>
-            </div>
-            <% end %>
+              <div class="mb-3">
+                <%= label_tag :start_date, nil, class: "form-label" %>
+                <%= date_field_tag :start_date, params[:start_date], class: "form-control" %>
+              </div>
+              <div class="mb-3">
+                <%= label_tag :end_date, nil, class: "form-label" %>
+                <%= date_field_tag :end_date, params[:end_date], class: "form-control" %>
+              </div>
+              <% if current_user&.admin? %>
+              <div class="form-check mb-3">
+                <%= check_box_tag :active, true, checked = false, class: "form-check-input" %>
+                <%= label_tag :active, t(".label_active"), class: "form-check-label" %>
+              </div>
+              <% end %>
             </div>
             <div class="modal-footer">
               <%= submit_tag t(".submit_btn"), class: "btn btn-success" %>

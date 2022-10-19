@@ -12,30 +12,11 @@
 
   <body>
     <div class="container">
-     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top ">
-        <i class="fa fa-language text-primary px-3">
-          <%= link_to "En  ", locale:"en" %>
-          |<%= link_to "  Vi", locale:"vi" %>
-        </i>
-        <% if logged_in? %>
-          <%= link_to t(".log_out"), logout_path, class: "nav-item nav-link", method: :delete %>
-        <% else %>
-          <%= link_to t(".log_in"), login_path, class: "nav-item nav-link" %>
-        <% end %>
-      </nav>
-      <div class="row">
-        <div class="col-2 flex-row-reverse">
-          <div>
-            <%= render "admin/layouts/header" %>
-          </div>
-        </div>
-        <div class="col-10">
-          <% flash.each do |message_type, message| %>
-            <div class="alert alert-<%= message_type %>"><%= message %></div>
-          <% end %>
-          <%= yield %>
-        </div>
-      </div>
+      <%= render "admin/layouts/header" %>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <%= yield %>
     </div>
   </body>
 </html>

@@ -3,5 +3,6 @@
   <td><%= link_to tour.title, admin_tour_path(tour.id) %></td>
   <td><%= tour.show_active %></td>
   <td><%= tour.created_at.strftime Settings.date_time.format %></td>
-  <td><%= link_to t(".delete"), "#" %>
+  <td><%= tour.updated_at.strftime Settings.date_time.format %></td>
+  <td><%= link_to t(".delete"), admin_tour_path(tour.id), method: :delete, data: { confirm: t(".confirm") }, class: "link-danger" %>
 </tr>

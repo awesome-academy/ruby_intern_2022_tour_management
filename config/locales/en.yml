@@ -2,8 +2,8 @@ en:
   shared:
     search:
       by_title: "Search by title"
-      modal_btn: "Advanced..."
-      modal_title: "Advanced Search"
+      modal_btn: "More..."
+      modal_title: "Search by..."
       label_active: "Actives tours"
       submit_btn: "Search"
     reviews:
@@ -108,31 +108,52 @@ en:
         title: "Tile"
         active: "Active"
         created_date: "Created"
+        updated_at: "Updated at"
     shared:
       error_messages:
         error: "error"
         text: "Total"
+      tour_form:
+        submit_btn: "Save"
+        cancel_btn: "Cancel"
     tours:
+      edit:
+        title: "Edit tour"
       create:
         success_save: "Successful create tour"
         unsuccess_save: "Unsuccessful creare tour"
+      update:
+        passed: "Successfully updated."
+        failed: "Failed to update."
+      destroy:
+        passed: "Successfully hidden."
+        failed: "Failed to update tour status."
+      find_tour_by_id:
+        failed: "Error: cannot load tour!"
       tour:
         comments: "reviews"
         book_now: "Book now"
         edit: "Edit"
         day: "days"
-        delete: "Delete"
+        delete: "Hide from user"
+        confirm: "Are you sure?"
       show:
+        header: "Tour details"
+        title: "Title: "
+        des: "Description: "
+        status: "Status: "
+        img: "Images:"
         about: "About tour"
-        schedule: "Schedule"
-        from: "From"
-        to: "To"
+        schedules: "Schedules: "
+        schedule_title: "Title: "
+        from: "from: "
+        to: "to: "
         book_now: "Book now"
         edit: "Edit"
         not_found: "Tour not found"
       new:
         new_tour: "New tour"
-        title: "Title"
+        title: "New tour"
         description: "Description"
         active: "active"
         images: "Images"
@@ -148,3 +169,4 @@ en:
       header:
         home: "Home"
         new_tour: "Create tour"
+        brand: "Admin"
