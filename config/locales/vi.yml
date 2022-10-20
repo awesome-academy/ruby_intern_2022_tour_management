@@ -1,11 +1,11 @@
 vi:
   shared:
     search:
-      by_title: "Tim theo ten"
-      modal_btn: "Nang cao..."
+      by_title: "Tim theo ten tour..."
+      modal_btn: "Them..."
       modal_title: "Tim kiem nang cao"
       label_active: "Cac tour co the dang ky"
-      submit_btn: "Tim kiem"
+      submit_btn: "Tim"
     reviews:
       title: "Danh gia"
     schedules:
@@ -108,31 +108,51 @@ vi:
         title: "Tiêu đề"
         active: "Hoạt động"
         created_date: "Ngày tạo"
+        updated_at: "Ngay cap nhat"
     shared:
       error_messages:
         error: "lỗi"
         text: "Có"
+      tour_form:
+        submit_btn: "Luu"
+        cancel_btn: "Huy"
     tours:
+      edit:
+        title: "Chinh sua tour"
       create:
         success_save: "Tạo tour thành công"
         unsuccess_save: "Tạo tour thất bại"
+      update:
+        passed: "Cap nhat tour thanh cong."
+        failed: "Khong the cap nhat tour."
+      destroy:
+        passed: "An tour thanh cong."
+        failed: "Khong the an tour hien tai."
+      find_tour_by_id:
+        failed: "Error: cannot load tour!"
       tour:
         comments: "Đánh giá"
         book_now: "Đặt ngay"
         edit: "Chỉnh sửa"
         day: "ngày"
-        delete: "Xóa"
+        delete: "An tour khoi nguoi dung"
+        confirm: "Ban co muon an tour?"
       show:
+        header: "Thong tin tour"
+        title: "Tieu de: "
+        des: "Mo ta: "
+        status: "Trang thai: "
+        img: "Anh:"
         about: "Chi tiết chuyến đi"
-        schedule: "Lịch trình"
-        from: "Từ"
-        to: "đến"
+        schedule: "Lịch trình: "
+        from: "từ: "
+        to: "đến: "
         book_now: "Đặt ngay"
         edit: "Chỉnh sửa"
         not_found: "Không tìm thấy tour"
       new:
         new_tour: "Tạo tour mới"
-        title: "Chủ đề"
+        title: "Tour moi"
         description: "Mô tả"
         active: "Hoạt động"
         images: "Ảnh"
@@ -148,3 +168,4 @@ vi:
       header:
         home: "Trang chủ"
         new_tour: "Tạo tour mới"
+        brand: "Quan tri"

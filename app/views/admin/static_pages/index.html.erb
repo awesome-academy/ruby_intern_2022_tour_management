@@ -1,5 +1,4 @@
 <div class="container-fluid">
-  <%= render "shared/search" %>
   <div class="container pt-5 pb-3">
     <div class="row">
       <% if @tours.empty? %>
@@ -12,6 +11,7 @@
               <td><%= t ".title" %></td>
               <td><%= t ".active" %></td>
               <td><%= t ".created_date" %></td>
+              <td><%= t ".updated_at" %></td>
               <td></td>
             </tr>
           </thread>

@@ -9,11 +9,13 @@ class ApplicationController < ActionController::Base
   before_action :set_pagy_locale
 
   private
+  def get_root_path
+    current_user&.admin? ? admin_root_path : root_path
+  end
 
   def not_found
     flash[:danger] = t ".not_found"
-    redirect_to admin_root_path if current_user&.admin?
-    redirect_to root_path
+    redirect_to get_root_path
   end
 
   def tour_params
