@@ -101,6 +101,22 @@ vi:
       edit: "Chỉnh sửa"
       not_found: "Không tìm thấy tour"
   admin:
+    bookings:
+      update:
+        success_update: "Cập nhật thành công"
+        fail_update: "Cập nhật thất bại"
+      booking:
+        confirm_accept: "Bạn chắc chắn chấp nhận?"
+        accept: "Chấp nhận"
+        confirm_cancel: "Bạn chắc chắn hủy?"
+        cancel: "Hủy"
+      index:
+        schedule_name: "Tên lịch trình"
+        start_date: "Ngày bắt đầy"
+        end_date: "Ngày kết thúc"
+        status: "Trạng thái"
+        user_name: "Tên người đặt"
+        no_booking_request: "Lịch sử yêu cầu đặt tour trống"
     static_pages:
       index:
         no_tours_msg: "Khong tim thay tour nao."
@@ -169,3 +185,4 @@ vi:
         home: "Trang chủ"
         new_tour: "Tạo tour mới"
         brand: "Quan tri"
+        booking_list: "Yêu cầu đặt tour"

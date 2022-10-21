@@ -1,0 +1,23 @@
+<% if @bookings.present? %>
+  <div class="mt-5">
+    <table class="table table-hover">
+      <thread class="thead-light">
+        <tr>
+          <td><%= t ".user_name" %></td>
+          <td><%= t ".schedule_name" %></td>
+          <td><%= t ".start_date" %></td>
+          <td><%= t ".end_date" %></td>
+          <td><%= t ".status" %></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </thread>
+      <tbody>
+        <%= render @bookings %>
+      </tbody>
+    </table>
+    <%== pagy_bootstrap_nav @pagy %>
+  </div>
+<% else %>
+  <p class="mt-5 text-center"><%= t ".no_booking_request" %></p>
+<% end %>
