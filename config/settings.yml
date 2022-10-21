@@ -26,6 +26,7 @@ pagy:
 
 images:
   total_min: 3
+  formats: "image/png,image/gif,image/jpeg"
 
 booking:
   status:

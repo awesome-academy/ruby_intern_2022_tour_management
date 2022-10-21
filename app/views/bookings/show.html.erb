@@ -1,9 +1,12 @@
-<% if @bookings.present? %>
-  <div class="mt-5">
+<div class="mt-5">
+  <h5><%= t ".title" %></h5>
+  <% if @bookings.present? %>
     <table class="table table-hover">
       <thread class="thead-light">
         <tr>
+          <td>#</td>
           <td><%= t ".schedule_name" %></td>
+          <td><%= t ".tour_title" %></td>
           <td><%= t ".start_date" %></td>
           <td><%= t ".end_date" %></td>
           <td><%= t ".status" %></td>
@@ -14,7 +17,7 @@
         <%= render @bookings %>
       </tbody>
     </table>
-  </div>
-<% else %>
-  <div class="text-center mt-5"><%= t ".no_bookings" %></div>
-<% end %>
+  <% else %>
+    <div class="text-center mt-5"><%= t ".no_bookings" %></div>
+  <% end %>
+</div>

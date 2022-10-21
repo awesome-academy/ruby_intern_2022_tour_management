@@ -21,7 +21,11 @@
             </h6>
           <% end %>
           <%= render "shared/reviews", tour: tour %>
-          <%= link_to t(".book_now"), tour_schedule_path(tour.id), class: "btn btn-primary mt-1" %>
+          <% if current_user&.bookings.count == tour.tour_schedules.count %>
+            <button type="button" class="btn btn-secondary mt-1" disabled><%= t ".booked_full_btn" %></button>
+          <% else %>
+            <%= link_to t(".book_now"), tour_schedule_path(tour.id), class: "btn btn-primary mt-1" %>
+          <% end %>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
     <div class="row">
       <div class="col-lg-6 min-height-500">
         <div class="position-relative h-100">
-          <%= image_tag @tour.images[0], class: "position-absolute w-100 h-100" %>
+          <%= image_tag tour_images[0], class: "position-absolute w-100 h-100" %>
         </div>
       </div>
       <div class="col-lg-6 pt-5 pb-lg-5">
@@ -13,10 +13,10 @@
           <p><%= @tour.description %></p>
           <div class="row mb-4">
             <div class="col-6">
-              <%= image_tag @tour.images[1], class: "img-fluid" %>
+              <%= image_tag tour_images[1], class: "img-fluid" %>
             </div>
             <div class="col-6">
-              <%= image_tag @tour.images[2], class: "img-fluid" %>
+              <%= image_tag tour_images[2], class: "img-fluid" %>
             </div>
           </div>
           <h5 class="text-primary"><%= t ".schedule" %></h5>
