@@ -1,4 +1,9 @@
 en:
+  book_mailer:
+    booking_confirmation:
+      subject: "Booking Confirmation"
+      hi: "Hi"
+      noti: "Your booking request has been "
   shared:
     search:
       by_title: "Search by title"
@@ -117,10 +122,10 @@ en:
         fail_update: "Failly update"
       booking:
         confirm_accept: "Are you sure acceting?"
+        confirm_cancel: "Are you sure cancelling?"
         accept: "Accept"
       index:
         title: "Bookings Management"
-        confirm_cancel: "Are you sure cancelling?"
         cancel: "Cancel"
         schedule_name: "Schedule name"
         start_date: "Start date"
@@ -195,6 +200,9 @@ en:
         remove_schedules: "Remove schedules"
     layouts:
       header:
+        links: "Go to"
+        home: "Home"
+        log_out: "Log out"
         tour_list: "Tours"
         home: "Home"
         new_tour: "Create tour"

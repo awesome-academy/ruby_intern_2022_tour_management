@@ -10,6 +10,8 @@ class Admin::BookingsController < Admin::BaseController
   def update
     @booking.status = params[:status].to_i
     if @booking.save
+      SendBookingConfirmationJob.perform_async(@booking.user_id,
+                                               @booking.status)
       flash[:success] = t ".success_update"
     else
       flash[:danger] = t ".fail_update"

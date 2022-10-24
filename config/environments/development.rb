@@ -45,6 +45,18 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
+  host = ENV.fetch("host", nil)
+  config.action_mailer.default_url_options = {host: host, protocol: "https"}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    user_name: ENV.fetch("mailer_user_name", nil),
+    password: ENV.fetch("mailer_password", nil),
+    address: ENV.fetch("mailer_address", nil),
+    domain: ENV.fetch("mailer_domain", nil),
+    port: ENV.fetch("mailer_port", nil),
+    authentication: :cram_md5
+  }
+
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.

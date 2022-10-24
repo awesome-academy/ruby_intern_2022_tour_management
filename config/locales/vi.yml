@@ -1,4 +1,9 @@
 vi:
+  book_mailer:
+    booking_confirmation:
+      subject: "Kết quả đặt tour"
+      hi: "Xin chào "
+      noti: "Yêu cầu đặt tour của bạn đã được "
   shared:
     search:
       by_title: "Tìm theo tên tour"
@@ -115,8 +120,8 @@ vi:
         fail_update: "Cập nhật thất bại"
       booking:
         confirm_accept: "Bạn chắc chắn chấp nhận?"
-        accept: "Chấp nhận"
         confirm_cancel: "Bạn chắc chắn hủy?"
+        accept: "Chấp nhận"
         cancel: "Hủy"
       index:
         title: "Quản lý yêu cầu đặt tour"
@@ -229,6 +234,7 @@ vi:
         create: "Tạo tour"
     layouts:
       header:
+        links: "Chuyển tới"
         home: "Trang chủ"
         new_tour: "Tạo tour mới"
         booking_list: "Yêu cầu đặt tour"
