@@ -10,6 +10,8 @@ en:
       title: "Reviews"
     schedules:
       title: "Available Schedules"
+      start: "From: "
+      end: "To: "
   static_pages:
     index:
       no_tours_msg: "No tours found."
@@ -31,7 +33,9 @@ en:
       booking_fail: "Can't book this schedule"
       not_found: "Can't find schedule"
     show:
-      schedule_name: "Name"
+      title: "Bookings requested"
+      schedule_name: "Schedule title"
+      tour_title: "Tour title"
       start_date: "Start date"
       end_date: "End date"
       status: "Status"
@@ -92,6 +96,7 @@ en:
       edit: "Edit"
       day: "days"
       schedules_btn: "Available schedules"
+      booked_full_btn: "Booked Full"
     show:
       about: "About tour"
       schedule: "Schedule"
@@ -109,6 +114,7 @@ en:
         confirm_accept: "Are you sure acceting?"
         accept: "Accept"
       index:
+        title: "Bookings Management"
         schedule_name: "Schedule name"
         start_date: "Start date"
         end_date: "End date"
@@ -117,9 +123,10 @@ en:
         no_booking_request: "Booking requests history is empty"
     static_pages:
       index:
+        table_title: "Tour Management"
         no_tours_msg: "No tours found."
         id: "Id"
-        title: "Tile"
+        title: "Title"
         active: "Active"
         created_date: "Created"
         updated_at: "Updated at"
@@ -181,6 +188,7 @@ en:
         remove_schedules: "Remove schedules"
     layouts:
       header:
+        tour_list: "Tours"
         home: "Home"
         new_tour: "Create tour"
         brand: "Admin"

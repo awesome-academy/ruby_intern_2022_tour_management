@@ -1,18 +1,20 @@
 vi:
   shared:
     search:
-      by_title: "Tim theo ten tour..."
-      modal_btn: "Them..."
-      modal_title: "Tim kiem nang cao"
-      label_active: "Cac tour co the dang ky"
-      submit_btn: "Tim"
+      by_title: "Tìm theo tên tour"
+      modal_btn: "Thêm..."
+      modal_title: "Tìm theo..."
+      label_active: "Các tour có thể đăng ký"
+      submit_btn: "Tìm"
     reviews:
-      title: "Danh gia"
+      title: "Đánh giá"
     schedules:
-      title: "Lich trinh hien co"
+      title: "Lịch trình hiện có"
+      start: "Bắt đầu ngày: "
+      end: "Kết thúc ngày: "
   static_pages:
     index:
-      no_tours_msg: "Khong tim thay tour nao."
+      no_tours_msg: "Không tìm thấy tour nào"
   images_count_error: "Số ảnh phải lớn hơn "
   time_schedule_error: "Ngày kết thúc phải lớn hơn ngày bắt đầu"
   duplicate_schedule: "Lịch trình này đã được đặt"
@@ -91,7 +93,8 @@ vi:
       book_now: "Đặt ngay"
       edit: "Chỉnh sửa"
       day: "ngày"
-      schedules_btn: "Lich trinh hien co"
+      schedules_btn: "Lịch trình hiện có"
+      booked_full_btn: "Đã đặt hết"
     show:
       about: "Chi tiết chuyến đi"
       schedule: "Lịch trình"
@@ -111,6 +114,7 @@ vi:
         confirm_cancel: "Bạn chắc chắn hủy?"
         cancel: "Hủy"
       index:
+        title: "Quản lý yêu cầu đặt tour"
         schedule_name: "Tên lịch trình"
         start_date: "Ngày bắt đầy"
         end_date: "Ngày kết thúc"
@@ -119,7 +123,8 @@ vi:
         no_booking_request: "Lịch sử yêu cầu đặt tour trống"
     static_pages:
       index:
-        no_tours_msg: "Khong tim thay tour nao."
+        table_title: "Quản lý tour"
+        no_tours_msg: "Không tìm thấy tour nào."
         id: "Mã"
         title: "Tiêu đề"
         active: "Hoạt động"
@@ -130,35 +135,35 @@ vi:
         error: "lỗi"
         text: "Có"
       tour_form:
-        submit_btn: "Luu"
-        cancel_btn: "Huy"
+        submit_btn: "Lưu"
+        cancel_btn: "Hủy"
     tours:
       edit:
-        title: "Chinh sua tour"
+        title: "Chỉnh sửa tour"
       create:
         success_save: "Tạo tour thành công"
         unsuccess_save: "Tạo tour thất bại"
       update:
-        passed: "Cap nhat tour thanh cong."
-        failed: "Khong the cap nhat tour."
+        passed: "Cập nhật tour thành công."
+        failed: "Không thể cập nhật tour."
       destroy:
-        passed: "An tour thanh cong."
-        failed: "Khong the an tour hien tai."
+        passed: "Ẩn tour thành công."
+        failed: "Không thể ẩn tour hiện tại"
       find_tour_by_id:
-        failed: "Error: cannot load tour!"
+        failed: "Lỗi: không thể tải tour."
       tour:
         comments: "Đánh giá"
         book_now: "Đặt ngay"
         edit: "Chỉnh sửa"
         day: "ngày"
-        delete: "An tour khoi nguoi dung"
-        confirm: "Ban co muon an tour?"
+        delete: "Ẩn tour khỏi người dùng"
+        confirm: "Bạn có muốn ẩn tour?"
       show:
-        header: "Thong tin tour"
-        title: "Tieu de: "
-        des: "Mo ta: "
-        status: "Trang thai: "
-        img: "Anh:"
+        header: "Thông tin tour"
+        title: "Tiêu đề: "
+        des: "Mô tả: "
+        status: "Trạng thái: "
+        img: "Ảnh:"
         about: "Chi tiết chuyến đi"
         schedule: "Lịch trình: "
         from: "từ: "
@@ -168,7 +173,7 @@ vi:
         not_found: "Không tìm thấy tour"
       new:
         new_tour: "Tạo tour mới"
-        title: "Tour moi"
+        title: "Tour mới"
         description: "Mô tả"
         active: "Hoạt động"
         images: "Ảnh"
@@ -182,6 +187,7 @@ vi:
         remove_schedules: "Xóa lịch trình"
     layouts:
       header:
+        tour_list: "Danh sách tour"
         home: "Trang chủ"
         new_tour: "Tạo tour mới"
         brand: "Quan tri"

@@ -2,7 +2,8 @@ class Admin::BookingsController < Admin::BaseController
   before_action :load_booking, only: :update
 
   def index
-    @pagy, @bookings = pagy Booking.order_by_status,
+    @pagy, @bookings = pagy Booking.includes([:user, {tour_schedule: :tour}])
+                                   .order_by_status,
                             items: Settings.pagy.booking.admin.number
   end
 

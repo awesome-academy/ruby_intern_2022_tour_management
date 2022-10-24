@@ -24,4 +24,8 @@ module ApplicationHelper
   def get_root_path
     current_user&.admin? ? admin_root_path : root_path
   end
+
+  def tour_id booking
+    booking.tour_schedule.tour_id
+  end
 end

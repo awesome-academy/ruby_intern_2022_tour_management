@@ -10,6 +10,12 @@ class Booking < ApplicationRecord
            to: :tour_schedule
   delegate :name, to: :user, prefix: true
 
+  COLORS = {
+    "pending" => "primary",
+    "accept" => "success",
+    "cancel" => "danger"
+  }.freeze
+
   scope :by_user_id, ->(id){where user_id: id}
   scope :order_by_status, ->{order :status}
 

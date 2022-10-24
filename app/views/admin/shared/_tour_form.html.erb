@@ -19,7 +19,7 @@
 
         <li class="list-group-item">
           <%= f.label :images, t(".images"), class: "d-block" %>
-          <%= f.file_field :images, multiple: true %>
+          <%= f.file_field :images, accept: Settings.images.formats, multiple: true, class: "form-control" %>
         </li>
 
         <li class="list-group-item">

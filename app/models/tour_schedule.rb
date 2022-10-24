@@ -16,6 +16,8 @@ class TourSchedule < ApplicationRecord
   scope :get_from_current_day, ->{where "start_date >= ?", DateTime.now}
   scope :by_tour_id, ->(id){where tour_id: id}
 
+  delegate :id, :title, to: :tour, prefix: true
+
   def start_date_format
     start_date.strftime Settings.date_time.format
   end

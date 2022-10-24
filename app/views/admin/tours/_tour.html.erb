@@ -1,7 +1,11 @@
 <tr>
   <td><%= tour.id %></td>
-  <td><%= link_to tour.title, admin_tour_path(tour.id) %></td>
-  <td><%= tour.show_active %></td>
+  <td><%= link_to tour.title, admin_tour_path(tour.id), class: "link-primary" %></td>
+  <td>
+    <p class="link-<%= tour.active ? "success" : "danger" %>">
+      <%= tour.show_active %>
+    </p>
+  </td>
   <td><%= tour.created_at.strftime Settings.date_time.format %></td>
   <td><%= tour.updated_at.strftime Settings.date_time.format %></td>
   <td><%= link_to t(".delete"), admin_tour_path(tour.id), method: :delete, data: { confirm: t(".confirm") }, class: "link-danger" %>

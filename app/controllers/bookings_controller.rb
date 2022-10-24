@@ -15,6 +15,7 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @bookings = current_user.bookings.order_by_status
+    @bookings = current_user.bookings.includes(tour_schedule: :tour)
+                            .order_by_status
   end
 end
