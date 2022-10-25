@@ -42,6 +42,9 @@ tour:
     max_length: 200
   description:
     max_length: 5000
+  displays:
+    hide: 0
+    show: 1
 
 review:
   comment:

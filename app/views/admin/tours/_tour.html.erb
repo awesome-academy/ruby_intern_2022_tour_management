@@ -8,5 +8,5 @@
   </td>
   <td><%= tour.created_at.strftime Settings.date_time.format %></td>
   <td><%= tour.updated_at.strftime Settings.date_time.format %></td>
-  <td><%= link_to t(".delete"), admin_tour_path(tour.id), method: :delete, data: { confirm: t(".confirm") }, class: "link-danger" %>
+  <td><%= get_link_to tour %></td>
 </tr>

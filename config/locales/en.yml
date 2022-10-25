@@ -145,6 +145,9 @@ en:
         submit_btn: "Save"
         cancel_btn: "Cancel"
     tours:
+      hide_tour:
+        passed: "Successfully hidden."
+        failed: "Failed to update tour status."
       edit:
         title: "Edit tour"
       create:
@@ -156,6 +159,9 @@ en:
       destroy:
         passed: "Successfully hidden."
         failed: "Failed to update tour status."
+        not_destroy: "You can't destroy this tour"
+        success_destroy: "Successful deleted"
+        fail_destroy: "Fail delete"
       find_tour_by_id:
         failed: "Error: cannot load tour!"
       tour:
@@ -164,7 +170,10 @@ en:
         edit: "Edit"
         day: "days"
         delete: "Hide from user"
+        show: "Show to user"
         confirm: "Are you sure?"
+        confirm_delete: "Tour will be deleted!"
+        delete_tour: "Delete tour"
       show:
         header: "Tour details"
         title: "Title: "
