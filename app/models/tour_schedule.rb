@@ -4,8 +4,10 @@ class TourSchedule < ApplicationRecord
 
   ALLOWED_PARAMS = %i(start_date end_date).freeze
 
-  validate :validate_time
-  validates :title, presence: true
+  validates :title, presence: true,
+            length: {maximum: Settings.tour_schedule.title.max_length}
+  validates :end_date, :start_date, presence: true
+  validate :validate_time, if: ->{start_date.present? && end_date.present?}
 
   scope :by_start_date, (lambda do |start_date|
     where "start_date >= ?", start_date.presence || DateTime.now

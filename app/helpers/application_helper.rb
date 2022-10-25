@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def get_form_path tour_id
-    tour_id.nil? ? new_admin_tour_path : admin_tour_path(tour_id)
+    tour_id.nil? ? admin_tours_path : admin_tour_path(tour_id)
   end
 
   def tour_images
