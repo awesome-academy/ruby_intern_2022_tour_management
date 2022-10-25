@@ -31,3 +31,4 @@ images:
 booking:
   status:
     accept: 1
+    cancel: 2

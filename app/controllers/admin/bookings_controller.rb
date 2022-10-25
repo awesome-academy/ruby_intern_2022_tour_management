@@ -16,10 +16,4 @@ class Admin::BookingsController < Admin::BaseController
     end
     redirect_to admin_bookings_path
   end
-
-  private
-
-  def load_booking
-    @booking = Booking.find params[:id]
-  end
 end

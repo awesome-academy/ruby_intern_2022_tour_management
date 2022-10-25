@@ -43,6 +43,11 @@ en:
       no_bookings: "You don't have any bookings"
     booking:
       cancel: "Cancel"
+    destroy:
+      success_destroy: "Successful cancelled"
+      fail_destroy: "Fail cancelled"
+      not_destroy: "You can't cancel this booking"
+      not_found: "This booking not found"
 
   tour_schedules:
     show:
@@ -115,6 +120,8 @@ en:
         accept: "Accept"
       index:
         title: "Bookings Management"
+        confirm_cancel: "Are you sure cancelling?"
+        cancel: "Cancel"
         schedule_name: "Schedule name"
         start_date: "Start date"
         end_date: "End date"
@@ -193,3 +200,4 @@ en:
         new_tour: "Create tour"
         brand: "Admin"
         booking_list: "Booking requests"
+        log_out: "Log out"

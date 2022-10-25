@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   before_action :user_logged_in
+  before_action :load_booking, only: :destroy
 
   def create
     @tour_schedule = TourSchedule.find params[:id]
@@ -11,11 +12,21 @@ class BookingsController < ApplicationController
       flash[:danger] = t ".booking_fail"
     end
 
-    redirect_to booking_path
+    redirect_to bookings_path
   end
 
   def show
-    @bookings = current_user.bookings.includes(tour_schedule: :tour)
+    @bookings = current_user.bookings.includes(:tour_schedule)
                             .order_by_status
+  end
+
+  def destroy
+    if @booking.pending? && @booking.destroy
+      flash[:success] = t ".success_destroy"
+    else
+      flash[:info] = t ".not_destroy"
+    end
+
+    redirect_to bookings_path
   end
 end

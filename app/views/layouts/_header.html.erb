@@ -11,14 +11,8 @@
       </div>
       <div class="col-lg-6 text-center text-lg-right">
         <div class="d-inline-flex align-items-center">
-          <%= link_to "#", class: "text-primary px-3" do %>
-            <i class="fab fa-facebook-f"></i>
-          <% end %>
-          <%= link_to "#", class: "text-primary px-3" do %>
-            <i class="fab fa-instagram"></i>
-          <% end %>
-          <%= link_to "#", class: "text-primary pl-3" do %>
-            <i class="fab fa-youtube"></i>
+          <% if current_user&.admin? %>
+            <%= link_to t(".admin"), admin_root_path %>
           <% end %>
           <i class="fa fa-language text-primary px-3">
             <%= link_to "En  ", locale:"en" %>
@@ -44,7 +38,7 @@
         <div class="navbar-nav ml-auto py-0">
           <%= link_to t(".home"), root_path, class: "nav-item nav-link"%>
           <% if logged_in? %>
-            <%= link_to t(".booked_tours"), booking_path, class: "nav-item nav-link" %>
+            <%= link_to t(".booked_tours"), bookings_path, class: "nav-item nav-link" %>
           <% end %>
           <div class="nav-item dropdown">
             <%= link_to t(".tours"), "#", class: "nav-link dropdown-toggle", data:{toggle: "dropdown"} %>

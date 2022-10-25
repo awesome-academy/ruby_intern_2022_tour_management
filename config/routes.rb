@@ -4,8 +4,8 @@ Rails.application.routes.draw do
     get "/login", to: "sessions#new"
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
-    post "/booking", to: "bookings#create"
-    get "/booking", to: "bookings#show"
+    resource :bookings, only: %i(create show)
+    resources :bookings, only: :destroy
     resources :tours, only: %i(index show)
     resources :tour_schedules, only: :show
     namespace :admin do
