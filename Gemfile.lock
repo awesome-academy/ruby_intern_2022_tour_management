@@ -94,6 +94,7 @@ GEM
     config (4.0.0)
       deep_merge (~> 1.2, >= 1.2.1)
       dry-validation (~> 1.0, >= 1.0.0)
+    connection_pool (2.3.0)
     crass (1.0.6)
     deep_merge (1.2.2)
     diff-lcs (1.5.0)
@@ -136,6 +137,8 @@ GEM
     ffi (1.15.5-java)
     ffi (1.15.5-x64-mingw32)
     ffi (1.15.5-x86-mingw32)
+    figaro (1.2.0)
+      thor (>= 0.14.0, < 2)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.12.0)
@@ -240,6 +243,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.8.0)
     regexp_parser (2.6.0)
     rexml (3.2.5)
     rspec-core (3.11.0)
@@ -299,6 +303,10 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     semantic_range (3.0.0)
+    sidekiq (6.5.7)
+      connection_pool (>= 2.2.5)
+      rack (~> 2.0)
+      redis (>= 4.5.0, < 5)
     spoon (0.0.6)
       ffi
     spring (4.1.0)
@@ -360,6 +368,7 @@ DEPENDENCIES
   cocoon
   config
   faker (= 2.1.2)
+  figaro
   image_processing (>= 1.2)
   jbuilder (~> 2.7)
   listen (~> 3.3)
@@ -376,6 +385,7 @@ DEPENDENCIES
   rubocop-rails (~> 2.14.0)
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
+  sidekiq
   spring
   turbolinks (~> 5)
   tzinfo-data

@@ -13,13 +13,13 @@
   <% if booking.pending? %>
     <td><div class="btn-group" role="group">
       <%= link_to t(".accept"), admin_booking_path(id: booking.id,
-                                    status: Settings.booking.status.accept),
-                    data: {confirm: t(".confirm_accept")},
-                    method: :patch, class: "btn btn-success" %>
-      <td><%= link_to t(".cancel"), admin_booking_path(id: booking.id,
-                                    status: Settings.booking.status.cancel),
-                    data: {confirm: t(".confirm_cancel")},
-                    method: :patch, class: "link-danger" %></td>
+                                                   status: Settings.booking.status.accept),
+                  data: {confirm: t(".confirm_accept")},
+                  method: :patch, class: "link-success" %>/
+      <%= link_to t(".cancel"), admin_booking_path(id: booking.id,
+                                                   status: Settings.booking.status.cancel),
+                  data: {confirm: t(".confirm_cancel")},
+                  method: :patch, class: "link-danger" %>
     </div></td>
   <% end %>
 </tr>

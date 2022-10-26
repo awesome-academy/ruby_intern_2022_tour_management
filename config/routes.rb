@@ -1,4 +1,7 @@
+require "sidekiq/web"
+
 Rails.application.routes.draw do
+  mount Sidekiq::Web => "/sidekiq"
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#index"
     get "/login", to: "sessions#new"
