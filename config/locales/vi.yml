@@ -142,7 +142,18 @@ vi:
       tour_form:
         submit_btn: "Lưu"
         cancel_btn: "Hủy"
+        new_tour: "Tạo tour mới"
+        title: "Tour mới"
+        description: "Mô tả"
+        active: "Hoạt động"
+        images: "Ảnh"
+        schedules: "Lịch trình"
+        add_schedule: "Thêm lịch trình"
+        create: "Tạo tour"
     tours:
+      hide_tour:
+        passed: "Ẩn tour thành công."
+        failed: "Không thể ẩn tour hiện tại"
       edit:
         title: "Chỉnh sửa tour"
       create:
@@ -154,6 +165,9 @@ vi:
       destroy:
         passed: "Ẩn tour thành công."
         failed: "Không thể ẩn tour hiện tại"
+        not_destroy: "Bạn không thể xóa tour này"
+        success_destroy: "Xóa tour thành công"
+        fail_destroy: "Xóa tour thất bại"
       find_tour_by_id:
         failed: "Lỗi: không thể tải tour."
       tour:
@@ -162,7 +176,10 @@ vi:
         edit: "Chỉnh sửa"
         day: "ngày"
         delete: "Ẩn tour khỏi người dùng"
-        confirm: "Bạn có muốn ẩn tour?"
+        show: "Hiển thị cho người dùng"
+        confirm: "Bạn chắc chắn muốn thay đổi?"
+        confirm_delete: "Bạn chắc chắn muốn xóa tour"
+        delete_tour: "Xóa tour"
       show:
         header: "Thông tin tour"
         title: "Tiêu đề: "
@@ -185,7 +202,7 @@ vi:
         schedules: "Lịch trình"
         add_schedule: "Thêm lịch trình"
         create: "Tạo tour"
-      tour_schedules_fields:
+      tour_schedule_fields:
         title: "Nội dung chuyến đi"
         from: "Từ"
         to: "Đến"
@@ -198,18 +215,8 @@ vi:
       update:
         passed: "Cap nhat tour thanh cong."
         failed: "Khong the cap nhat tour."
-      destroy:
-        passed: "An tour thanh cong."
-        failed: "Khong the an tour hien tai."
       find_tour_by_id:
         failed: "Error: cannot load tour!"
-      tour:
-        comments: "Đánh giá"
-        book_now: "Đặt ngay"
-        edit: "Chỉnh sửa"
-        day: "ngày"
-        delete: "An tour khoi nguoi dung"
-        confirm: "Ban co muon an tour?"
       show:
         header: "Thong tin tour"
         title: "Tieu de: "
@@ -224,9 +231,6 @@ vi:
         edit: "Chỉnh sửa"
         not_found: "Không tìm thấy tour"
         schedules: "Lich trinh hien co:"
-      new:
-        new_tour: "Tạo tour mới"
-        create: "Tạo tour"
     layouts:
       header:
         home: "Trang chủ"

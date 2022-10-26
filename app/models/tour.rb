@@ -26,6 +26,10 @@ class Tour < ApplicationRecord
     I18n.t(".#{active}")
   end
 
+  def has_bookings?
+    tour_schedules.includes(:bookings).any?{|s| s.bookings.present?}
+  end
+
   private
   def validate_image
     return if images.count >= Settings.images.total_min

@@ -28,4 +28,29 @@ module ApplicationHelper
   def tour_id booking
     booking.tour_schedule.tour_id
   end
+
+  def get_link_to tour
+    if tour.has_bookings?
+      tour_active_link tour
+    else
+      link_to t(".delete_tour"), admin_tour_path(tour.id), method: :delete,
+              data: {confirm: t(".confirm_delete")}, class: "btn btn-danger"
+    end
+  end
+
+  def tour_active_link tour
+    text = [:show, :success]
+    display = Settings.tour.displays.show
+
+    if tour.active?
+      text = [:delete, :danger]
+      display = Settings.tour.displays.hide
+    end
+
+    link_to t(".#{text[0]}"),
+            admin_tour_path(tour.id,
+                            {tour: {display: display}}),
+            method: :patch, data: {confirm: t(".confirm")},
+            class: "link-#{text[1]}"
+  end
 end

@@ -30,7 +30,7 @@ class Admin::ToursController < Admin::BaseController
   def update
     if @tour.update tour_params
       flash[:success] = t ".passed"
-      redirect_to admin_tour_path(@tour.id)
+      redirect_after_update
     else
       flash.now[:danger] = t ".failed"
       render :edit
@@ -38,21 +38,37 @@ class Admin::ToursController < Admin::BaseController
   end
 
   def destroy
-    if @tour.update active: false
-      flash[:success] = t ".passed"
+    if @tour.has_bookings?
+      flash[:danger] = t ".not_destroy"
+    elsif @tour.destroy
+      flash[:success] = t ".success_destroy"
     else
-      flash[:danger] = t ".failed"
+      flash[:danger] = t ".fail_destroy"
     end
     redirect_to admin_root_path
   end
 
   private
 
+  def redirect_after_update
+    if params[:tour][:display].present?
+      redirect_to admin_root_path
+    else
+      redirect_to admin_tour_path(@tour.id)
+    end
+  end
+
   def find_tour_by_id
     @tour = Tour.find params[:id]
   end
 
   def tour_params
-    params.require(:tour).permit(Tour::CREATE_ATTRS)
+    tour_params = params.require(:tour).permit(Tour::CREATE_ATTRS)
+
+    if params[:tour][:display].present?
+      tour_params[:active] = params[:tour][:display]
+    end
+
+    tour_params
   end
 end
