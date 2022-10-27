@@ -23,6 +23,7 @@ pagy:
   booking:
     admin:
       number: 10
+  review: 3
 
 images:
   total_min: 3

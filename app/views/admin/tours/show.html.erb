@@ -28,6 +28,20 @@
           <% end %>
         </ul>
       </li>
+      <li class="list-group-item">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= t ".reviews" %></h5>
+            <ul class="list-group list-group-flush">
+              <% @tour.reviews.each do |r| %>
+                <li class="list-group-item">
+                  <%= t ".comment", {content: r.comment, name: r.user_name, time: r.created_at.strftime(Settings.date_time.format)} %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </li>
     </ul>
   </div>
   <div class="card-footer">

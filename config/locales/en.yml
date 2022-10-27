@@ -17,6 +17,9 @@ en:
       title: "Available Schedules"
       start: "From: "
       end: "To: "
+    error_messages:
+      contain: "The form contains "
+      err: "error"
   static_pages:
     index:
       no_tours_msg: "No tours found."
@@ -115,6 +118,10 @@ en:
       book_now: "Book now"
       edit: "Edit"
       not_found: "Tour not found"
+      reviews: "Reviews"
+      no_rv: "No reviews yet."
+      not_sign_in: "Sign in to comment."
+      comment: "Comment"
   admin:
     bookings:
       update:
@@ -193,6 +200,8 @@ en:
         book_now: "Book now"
         edit: "Edit"
         not_found: "Tour not found"
+        reviews: "Reviews"
+        comment: "%{content} | by %{name} at: %{time}"
       new:
         new_tour: "New tour"
         title: "New tour"
