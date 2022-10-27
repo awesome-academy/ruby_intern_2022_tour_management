@@ -17,6 +17,9 @@ vi:
       title: "Lịch trình hiện có"
       start: "Bắt đầu ngày: "
       end: "Kết thúc ngày: "
+    error_messages:
+      contain: "Có "
+      err: "lỗi"
   static_pages:
     index:
       no_tours_msg: "Không tìm thấy tour nào"
@@ -113,6 +116,10 @@ vi:
       book_now: "Đặt ngay"
       edit: "Chỉnh sửa"
       not_found: "Không tìm thấy tour"
+      reviews: "Đánh giá"
+      no_rv: "Hiện chưa có đánh giá nào."
+      not_sign_in: "Đăng nhập để đánh giá."
+      comment: "Bình luận"
   admin:
     bookings:
       update:
@@ -198,6 +205,8 @@ vi:
         book_now: "Đặt ngay"
         edit: "Chỉnh sửa"
         not_found: "Không tìm thấy tour"
+        reviews: "Đánh giá"
+        comment: "%{content} | bởi %{name} vào lúc: %{time}"
       new:
         new_tour: "Tạo tour mới"
         title: "Tour mới"
@@ -222,20 +231,16 @@ vi:
         failed: "Khong the cap nhat tour."
       find_tour_by_id:
         failed: "Error: cannot load tour!"
-      show:
-        header: "Thong tin tour"
-        title: "Tieu de: "
-        des: "Mo ta: "
-        status: "Trang thai: "
-        img: "Anh:"
-        about: "Chi tiết chuyến đi"
-        schedule_title: "Lịch trình: "
-        from: "từ: "
-        to: "đến: "
+      tour:
+        comments: "Đánh giá"
         book_now: "Đặt ngay"
         edit: "Chỉnh sửa"
-        not_found: "Không tìm thấy tour"
-        schedules: "Lich trinh hien co:"
+        day: "ngày"
+        delete: "An tour khoi nguoi dung"
+        confirm: "Ban co muon an tour?"
+      new:
+        new_tour: "Tạo tour mới"
+        create: "Tạo tour"
     layouts:
       header:
         links: "Chuyển tới"
