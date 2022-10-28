@@ -148,6 +148,20 @@ vi:
         created_date: "Ngày tạo"
         updated_at: "Ngay cap nhat"
     shared:
+      search_booking:
+        user_name: "Nhập tên người dùng"
+        schedule_name: "Nhập tên lịch trình"
+        start_date: "Nhập ngày bắt đầu"
+        end_date: "Nhập ngày kết thúc"
+        pending: "Chờ kiểm duyệt"
+        accept: "Đã chấp nhận"
+        cancel: "Đã hủy"
+        search: "Tìm kiếm"
+        user_label: "Người dùng"
+        schedule_label: "Lịch trình"
+        start_date_label: "Ngày bắt đầu"
+        end_date_label: "Ngày kết thúc"
+        status_label: "Trạng thái"
       error_messages:
         error: "lỗi"
         text: "Có"
@@ -231,16 +245,6 @@ vi:
         failed: "Khong the cap nhat tour."
       find_tour_by_id:
         failed: "Error: cannot load tour!"
-      tour:
-        comments: "Đánh giá"
-        book_now: "Đặt ngay"
-        edit: "Chỉnh sửa"
-        day: "ngày"
-        delete: "An tour khoi nguoi dung"
-        confirm: "Ban co muon an tour?"
-      new:
-        new_tour: "Tạo tour mới"
-        create: "Tạo tour"
     layouts:
       header:
         links: "Chuyển tới"

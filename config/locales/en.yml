@@ -133,6 +133,7 @@ en:
         accept: "Accept"
       index:
         title: "Bookings Management"
+        confirm_cancel: "Are you sure cancelling?"
         cancel: "Cancel"
         schedule_name: "Schedule name"
         start_date: "Start date"
@@ -150,6 +151,20 @@ en:
         created_date: "Created"
         updated_at: "Updated at"
     shared:
+      search_booking:
+        user_name: "Enter user name"
+        schedule_name: "Enter schedule name"
+        start_date: "Enter start date"
+        end_date: "Enter end date"
+        pending: "Pending"
+        accept: "Accept"
+        cancel: "Cancel"
+        search: "Search"
+        user_label: "User"
+        schedule_label: "Schedule"
+        start_date_label: "Start date"
+        end_date_label: "End date"
+        status_label: "Status"
       error_messages:
         error: "error"
         text: "Total"
