@@ -7,6 +7,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap"
 gem "cocoon"
 gem "config"
+gem "factory_bot_rails"
 gem "faker", "2.1.2"
 gem "figaro"
 gem "image_processing", ">= 1.2"
@@ -18,12 +19,16 @@ gem "rails", "~> 6.1.7"
 gem "rails-i18n"
 gem "sass-rails", ">= 6"
 gem "sidekiq"
+gem "simplecov"
+gem "simplecov-rcov"
 gem "turbolinks", "~> 5"
 gem "webpacker", "~> 5.0"
 
 group :development, :test do
+  gem "ffaker"
   gem "pry-rails"
-  gem "rspec-rails", "~> 4.0.1"
+  gem "rails-controller-testing"
+  gem "rspec-rails", "~> 5.0.0"
   gem "rubocop", "~> 1.26", require: false
   gem "rubocop-checkstyle_formatter", require: false
   gem "rubocop-rails", "~> 2.14.0", require: false
