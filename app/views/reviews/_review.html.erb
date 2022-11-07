@@ -1,7 +1,0 @@
-<li class="list-group-item d-flex flex-column review-<%= review.id %>">
-  <div>
-    <b><%= review.user_name %></b>
-    <span class="text-muted"><%= review.created_at.localtime.strftime(Settings.date_time.format) %></span>
-  </div>
-  <%= review.comment %>
-</li>
