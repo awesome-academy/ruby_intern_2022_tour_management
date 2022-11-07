@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   include Pagy::Backend
-  include SessionsHelper
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
 
@@ -9,6 +8,11 @@ class ApplicationController < ActionController::Base
   before_action :set_pagy_locale
 
   private
+
+  def after_sign_in_path_for _resource
+    current_user.admin? ? admin_root_path : root_path
+  end
+
   def get_root_path
     current_user&.admin? ? admin_root_path : root_path
   end

@@ -46,7 +46,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   host = ENV.fetch("host", nil)
-  config.action_mailer.default_url_options = {host: host, protocol: "https"}
+  config.action_mailer.default_url_options = {host: host, port: 3000}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     user_name: ENV.fetch("mailer_user_name", nil),

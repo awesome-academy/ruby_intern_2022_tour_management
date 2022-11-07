@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :validatable
   before_save :downcase_email
 
   enum role: {normal: 0, admin: 1}
@@ -14,20 +18,6 @@ class User < ApplicationRecord
     uniqueness: true
   validates :password, presence: true,
     length: {minimum: Settings.user.length.password_min}
-
-  has_secure_password
-
-  class << self
-    def digest string
-      cost = if ActiveModel::SecurePassword.min_cost
-               BCrypt::Engine::MIN_COST
-             else
-               BCrypt::Engine.cost
-             end
-
-      BCrypt::Password.create string, cost: cost
-    end
-  end
 
   def booked_schedule? schedule_id
     bookings.any?{|b| b.tour_schedule_id == schedule_id}

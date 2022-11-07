@@ -37,7 +37,7 @@
       <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
         <div class="navbar-nav ml-auto py-0">
           <%= link_to t(".home"), root_path, class: "nav-item nav-link"%>
-          <% if logged_in? %>
+          <% if user_signed_in? %>
             <%= link_to t(".booked_tours"), bookings_path, class: "nav-item nav-link" %>
           <% end %>
           <div class="nav-item dropdown">
@@ -48,10 +48,12 @@
             </div>
           </div>
 
-          <% if logged_in? %>
-            <%= link_to t(".log_out"), logout_path, class: "nav-item nav-link", method: :delete %>
+          <% if user_signed_in? %>
+            <%= link_to t(".log_out"), destroy_user_session_path,
+                        class: "nav-item nav-link", method: :delete %>
           <% else %>
-            <%= link_to t(".log_in"), login_path, class: "nav-item nav-link" %>
+            <%= link_to t(".log_in"), new_user_session_path,
+                        class: "nav-item nav-link" %>
           <% end %>
         </div>
       </div>
