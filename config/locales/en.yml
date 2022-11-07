@@ -1,0 +1,244 @@
+en:
+  book_mailer:
+    booking_confirmation:
+      subject: "Booking Confirmation"
+      hi: "Hi"
+      noti: "Your booking request has been "
+  shared:
+    search:
+      by_title: "Search by title"
+      modal_btn: "More..."
+      modal_title: "Search by..."
+      label_active: "Actives tours"
+      submit_btn: "Search"
+    reviews:
+      title: "Reviews"
+    schedules:
+      title: "Available Schedules"
+      start: "From: "
+      end: "To: "
+    error_messages:
+      contain: "The form contains "
+      err: "error"
+  static_pages:
+    index:
+      no_tours_msg: "No tours found."
+  images_count_error: "Total images must greater than "
+  time_schedule_error: "End date must greater than start date"
+  duplicate_schedule: "You booked schedule"
+
+  pending: "pending"
+  accept: "accept"
+  cancel: "cancel"
+
+  true: "Yes"
+  false: "No"
+
+  bookings:
+    create:
+      not_logged_in: "You must log in before book schedule"
+      booking_success: "Schedule booked"
+      booking_fail: "Can't book this schedule"
+      not_found: "Can't find schedule"
+    show:
+      title: "Bookings requested"
+      schedule_name: "Schedule title"
+      tour_title: "Tour title"
+      start_date: "Start date"
+      end_date: "End date"
+      status: "Status"
+      error: "Have a error when get yours schedules"
+      no_bookings: "You don't have any bookings"
+    booking:
+      cancel: "Cancel"
+    destroy:
+      success_destroy: "Successful cancelled"
+      fail_destroy: "Fail cancelled"
+      not_destroy: "You can't cancel this booking"
+      not_found: "This booking not found"
+
+  tour_schedules:
+    show:
+      schedule_name: "Tours name"
+      start_date: "Start date"
+      end_date: "End date"
+      not_found_schedule: "We don't have schedule for this tour"
+      no_schedules: "No schedule available"
+    tour_schedule:
+      book: "Book schedule"
+      booked: "Booked schedule"
+
+  pagy:
+    nav:
+      next: "Next"
+      prev: "Prev"
+  layouts:
+    header:
+      home: "Home"
+      about: "About"
+      tours: "Tours"
+      log_in: "Log in"
+      log_out: "Log out"
+      new: "New"
+      popular: "Popular"
+      booked_tours: "Booked schedules"
+    footer:
+      services: "Services"
+      hotel: "Hotel"
+      travel: "Travel"
+      food: "Food"
+      contact: "Contact Us"
+      main_page: "This is our main page"
+    application_admin:
+      title: "Admin | Tour management"
+      log_out: "Log out"
+      log_in: "Log in"
+    application:
+      title: "Booking tour"
+  sessions:
+    new:
+      email: "Email"
+      password: "Password"
+      log_in: "Log in"
+    success: "Successful login"
+    unsuccess_login: "invalid email or password"
+  tours:
+    tour:
+      comments: "reviews"
+      book_now: "Book now"
+      edit: "Edit"
+      day: "days"
+      schedules_btn: "Available schedules"
+      booked_full_btn: "Booked Full"
+    show:
+      about: "About tour"
+      schedule: "Schedule"
+      from: "From"
+      to: "To"
+      book_now: "Book now"
+      edit: "Edit"
+      not_found: "Tour not found"
+      reviews: "Reviews"
+      no_rv: "No reviews yet."
+      not_sign_in: "Sign in to comment."
+      comment: "Comment"
+  admin:
+    bookings:
+      update:
+        success_update: "Successful update"
+        fail_update: "Failly update"
+      booking:
+        confirm_accept: "Are you sure acceting?"
+        confirm_cancel: "Are you sure cancelling?"
+        accept: "Accept"
+      index:
+        title: "Bookings Management"
+        confirm_cancel: "Are you sure cancelling?"
+        cancel: "Cancel"
+        schedule_name: "Schedule name"
+        start_date: "Start date"
+        end_date: "End date"
+        status: "Status"
+        user_name: "Booker name"
+        no_booking_request: "Booking requests history is empty"
+    static_pages:
+      index:
+        table_title: "Tour Management"
+        no_tours_msg: "No tours found."
+        id: "Id"
+        title: "Title"
+        active: "Active"
+        created_date: "Created"
+        updated_at: "Updated at"
+    shared:
+      search_booking:
+        user_name: "Enter user name"
+        schedule_name: "Enter schedule name"
+        start_date: "Enter start date"
+        end_date: "Enter end date"
+        pending: "Pending"
+        accept: "Accept"
+        cancel: "Cancel"
+        search: "Search"
+        user_label: "User"
+        schedule_label: "Schedule"
+        start_date_label: "Start date"
+        end_date_label: "End date"
+        status_label: "Status"
+      error_messages:
+        error: "error"
+        text: "Total"
+      tour_form:
+        submit_btn: "Save"
+        cancel_btn: "Cancel"
+    tours:
+      hide_tour:
+        passed: "Successfully hidden."
+        failed: "Failed to update tour status."
+      edit:
+        title: "Edit tour"
+      create:
+        success_save: "Successful create tour"
+        unsuccess_save: "Unsuccessful creare tour"
+      update:
+        passed: "Successfully updated."
+        failed: "Failed to update."
+      destroy:
+        passed: "Successfully hidden."
+        failed: "Failed to update tour status."
+        not_destroy: "You can't destroy this tour"
+        success_destroy: "Successful deleted"
+        fail_destroy: "Fail delete"
+      find_tour_by_id:
+        failed: "Error: cannot load tour!"
+      tour:
+        comments: "reviews"
+        book_now: "Book now"
+        edit: "Edit"
+        day: "days"
+        delete: "Hide from user"
+        show: "Show to user"
+        confirm: "Are you sure?"
+        confirm_delete: "Tour will be deleted!"
+        delete_tour: "Delete tour"
+      show:
+        header: "Tour details"
+        title: "Title: "
+        des: "Description: "
+        status: "Status: "
+        img: "Images:"
+        about: "About tour"
+        schedules: "Schedules: "
+        schedule_title: "Title: "
+        from: "from: "
+        to: "to: "
+        book_now: "Book now"
+        edit: "Edit"
+        not_found: "Tour not found"
+        reviews: "Reviews"
+        comment: "%{content} | by %{name} at: %{time}"
+      new:
+        new_tour: "New tour"
+        title: "New tour"
+        description: "Description"
+        active: "active"
+        images: "Images"
+        schedules: "Schedules"
+        add_schedule: "Add schedule"
+        create: "Create"
+      tour_schedules_fields:
+        title: "Title"
+        from: "From"
+        to: "To"
+        remove_schedules: "Remove schedules"
+    layouts:
+      header:
+        links: "Go to"
+        home: "Home"
+        log_out: "Log out"
+        tour_list: "Tours"
+        home: "Home"
+        new_tour: "Create tour"
+        brand: "Admin"
+        booking_list: "Booking requests"
+        log_out: "Log out"

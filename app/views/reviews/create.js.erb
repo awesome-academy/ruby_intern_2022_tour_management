@@ -1,0 +1,7 @@
+$('#error_explanation') ? $('#error_explanation').remove() : null;
+<% if @review.errors.any? %>
+  $('#new_review').prepend('<%= j render "shared/error_messages", object: @review %>');
+<% else %>
+  $('#reviews').prepend('<%= j render @review %>');
+  $('#new_review').trigger('reset');
+<% end %>
