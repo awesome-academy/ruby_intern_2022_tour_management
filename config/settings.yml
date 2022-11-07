@@ -1,0 +1,52 @@
+footer:
+  street: "123 Street, New York, USA"
+  phone: "+012 345 67890"
+  email: "info@example.com"
+
+user:
+  email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  length:
+    name_max: 50
+    email_max: 255
+    password_min: 6
+
+date_time:
+  format: "%F %T"
+  cmt_format: "%H:%M, %d/%m/%Y"
+
+pagy:
+  tour:
+    user:
+      number: 6
+    admin:
+      number: 10
+  booking:
+    admin:
+      number: 10
+  review: 3
+
+images:
+  total_min: 3
+  formats: "image/png,image/gif,image/jpeg"
+
+booking:
+  status:
+    accept: 1
+    cancel: 2
+
+tour_schedule:
+  title:
+    max_length: 200
+
+tour:
+  title:
+    max_length: 200
+  description:
+    max_length: 5000
+  displays:
+    hide: 0
+    show: 1
+
+review:
+  comment:
+    max_length: 7000

@@ -1,0 +1,28 @@
+@import "colors.scss";
+
+.btn-primary2 {
+  background-color: $green;
+  color: white;
+}
+
+.spacing_letter {
+  letter-spacing: 5px;
+}
+
+#login-page {
+  padding-left: 30%;
+
+  h1 {
+    padding-left: 20%;
+    margin-top: 20px;
+  }
+
+  .btn {
+    margin-top: 15px;
+    margin-left: 83%;
+  }
+}
+
+.min-height-500 {
+  min-height: 500px;
+}

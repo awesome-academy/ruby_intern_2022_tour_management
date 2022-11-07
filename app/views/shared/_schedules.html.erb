@@ -1,0 +1,25 @@
+<div class="modal fade" id="schedulesModal<%= tour.id %>" tabindex="-1" aria-labelledby="schedulesModalLabel">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"><%= t ".title" %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <% tour.tour_schedules.each do |s| %>
+          <div class="card mb-1">
+            <div class="card-header">
+              <%= s.title %>
+            </div>
+            <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b><%= t ".start" %></b> <%= s.start_date.to_date %></li>
+              <li class="list-group-item"><b><%= t ".end" %></b> <%= s.end_date.to_date %></li>
+            </ul>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
