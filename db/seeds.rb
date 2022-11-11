@@ -35,10 +35,11 @@ end
 20.times do
   tour_id = Faker::Number.between from: 1, to: 10
   start_date = Faker::Date.forward(days: 3)
-  end_date = Faker::Date.forward(days: 20)
+  title = Faker::Lorem.paragraph(sentence_count: 1)
 
-  TourSchedule.create!(tour_id: tour_id, start_date: start_date,
-                       end_date: end_date)
+  TourSchedule.create!(title: title, tour_id: tour_id,
+                       start_date: start_date,
+                       end_date: start_date + 2.days)
 end
 
 30.times do

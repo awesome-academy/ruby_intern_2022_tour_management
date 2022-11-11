@@ -1,5 +1,4 @@
 require "rails_helper"
-include SessionsHelper
 
 RSpec.shared_examples "update examples" do
   it "should found" do
@@ -16,7 +15,7 @@ RSpec.describe Admin::ToursController, type: :controller do
   let(:user){ FactoryBot.create :user }
 
   before do
-    log_in user
+    sign_in user
   end
 
   describe "GET #show" do
