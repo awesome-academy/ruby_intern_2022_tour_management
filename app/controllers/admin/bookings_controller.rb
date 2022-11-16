@@ -1,4 +1,6 @@
 class Admin::BookingsController < Admin::BaseController
+  load_and_authorize_resource
+
   before_action :load_booking, only: :update
   before_action :load_list_booking, only: :index
 

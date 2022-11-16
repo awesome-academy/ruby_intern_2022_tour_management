@@ -1,4 +1,6 @@
 class Admin::ToursController < Admin::BaseController
+  load_and_authorize_resource
+
   before_action :find_tour_by_id, except: %i(new create)
 
   def new

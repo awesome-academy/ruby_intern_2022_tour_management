@@ -5,6 +5,7 @@ ruby "2.7.1"
 gem "bcrypt", "3.1.13"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "bootstrap"
+gem "cancancan"
 gem "cocoon"
 gem "config"
 gem "devise"
