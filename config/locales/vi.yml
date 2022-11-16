@@ -6,11 +6,13 @@ vi:
       noti: "Yêu cầu đặt tour của bạn đã được "
   shared:
     search:
-      by_title: "Tìm theo tên tour"
+      by_title: "Tên tour"
       modal_btn: "Thêm..."
       modal_title: "Tìm theo..."
       label_active: "Các tour có thể đăng ký"
       submit_btn: "Tìm"
+      search_start_date: "Từ ngày"
+      search_end_date: "Đến ngày"
     reviews:
       title: "Đánh giá"
     schedules:
@@ -254,3 +256,4 @@ vi:
         brand: "Quan tri"
         log_out: "Đăng xuất"
         tour_list: "Danh sách tour"
+        add: "Thêm mới"

@@ -14,8 +14,6 @@ class Admin::BookingsController < Admin::BaseController
   def update
     @booking.status = params[:status].to_i
     if @booking.save
-      SendBookingConfirmationJob.perform_async(@booking.user_id,
-                                               @booking.status)
       flash[:success] = t ".success_update"
     else
       flash[:danger] = t ".fail_update"
@@ -26,17 +24,8 @@ class Admin::BookingsController < Admin::BaseController
   private
 
   def load_list_booking
-    @pagy, @bookings = pagy get_booking_by_params,
+    @q = Booking.ransack params[:q]
+    @pagy, @bookings = pagy @q.result(distinct: true).order("status"),
                             items: Settings.pagy.booking.admin.number
-  end
-
-  def get_booking_by_params
-    Booking.includes(Booking::JOIN_TABLE)
-           .by_user_name(params[:user_name])
-           .by_schedule_name(params[:schedule_name])
-           .by_start_date(params[:start_date])
-           .by_end_date(params[:end_date])
-           .by_status(params[:status])
-           .order_by_status
   end
 end

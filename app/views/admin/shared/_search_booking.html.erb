@@ -1,39 +1,35 @@
-<%= form_tag admin_bookings_path, method: :get,
-             remote: true, class: "d-flex flex-grow-1 mb-3" do %>
+<%= search_form_for @q, url: admin_bookings_path, method: :get,
+             remote: true, class: "d-flex flex-grow-1 mb-3" do |f| %>
   <div class="m-2">
-    <%= label_tag :user_name, t(".user_label"), class: "form-label" %>
-    <%= text_field_tag :user_name, params[:user],
-                       class: "form-control",
+    <%= f.label :user_name_cont, t(".user_label"), class: "form-label" %>
+    <%= f.search_field :user_name_cont, class: "form-control",
                        placeholder: t(".user_name") %>
   </div>
   <div class="m-2">
-    <%= label_tag :schedule_name, t(".schedule_label"),
+    <%= f.label :tour_schedule_title_cont, t(".schedule_label"),
                   class: "form-label" %>
-    <%= text_field_tag :schedule_name, params[:schedule_name],
-                       class: "form-control",
+    <%= f.search_field :tour_schedule_title_cont, class: "form-control",
                        placeholder: t(".schedule_name") %>
   </div>
   <div class="m-2">
-    <%= label_tag :start_date, t(".start_date_label"),
+    <%= f.label :tour_schedule_start_date_gteq, t(".start_date_label"),
                   class: "form-label" %>
-    <%= date_field_tag :start_date, params[:start_date],
-                       class: "form-control",
+    <%= f.date_field :tour_schedule_start_date_gteq, class: "form-control",
                        placeholder: t(".start_date") %>
   </div>
   <div class="m-2">
-    <%= label_tag :end_date, t(".end_date_label"), class: "form-label" %>
-    <%= date_field_tag :end_date, params[:end_date],
-                       class: "form-control",
+    <%= f.label :tour_schedule_end_date_lteq, t(".end_date_label"), class: "form-label" %>
+    <%= f.date_field :tour_schedule_end_date_lteq, class: "form-control",
                        placeholder: t(".end_date") %>
   </div>
   <div class="m-2">
-    <%= label_tag :status, t(".status_label"), class: "form-lable" %>
-    <%= select_tag :status,
+    <%= f.label :status_eq, t(".status_label"), class: "form-lable" %>
+    <%= f.select :status_eq,
                    options_for_select(select_options_for_booking,
                                       Booking.statuses[:pending]),
                    class: "form-select" %>
   </div>
   <div class="mt-4 pt-3">
-    <%= submit_tag t(".search"), class: "btn btn-success" %>
+    <%= f.submit t(".search"), class: "btn btn-success" %>
   </div>
 <% end %>

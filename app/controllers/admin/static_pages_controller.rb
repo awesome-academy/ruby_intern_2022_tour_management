@@ -1,7 +1,7 @@
 class Admin::StaticPagesController < Admin::BaseController
   def index
-    @pagy, @tours = pagy Tour.time_desc.by_title(params[:title])
-                             .actived(params[:active]),
+    @q = Tour.ransack params[:q]
+    @pagy, @tours = pagy @q.result(distinct: true),
                          items: Settings.pagy.tour.admin.number
   end
 end
