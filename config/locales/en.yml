@@ -6,11 +6,13 @@ en:
       noti: "Your booking request has been "
   shared:
     search:
-      by_title: "Search by title"
+      by_title: "Tour's name"
       modal_btn: "More..."
       modal_title: "Search by..."
       label_active: "Actives tours"
       submit_btn: "Search"
+      search_start_date: "From date"
+      search_end_date: "End date"
     reviews:
       title: "Reviews"
     schedules:
@@ -242,3 +244,4 @@ en:
         brand: "Admin"
         booking_list: "Booking requests"
         log_out: "Log out"
+        add: "Add"

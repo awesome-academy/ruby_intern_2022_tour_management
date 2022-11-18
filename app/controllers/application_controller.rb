@@ -28,9 +28,9 @@ class ApplicationController < ActionController::Base
   end
 
   def get_tours
-    @pagy, @tours = pagy Tour.includes(:tour_schedules).by_id(get_tour_ids)
-                             .by_title(params[:title]).actived(true),
-                         items: Settings.pagy.tour.user.number
+    @q = Tour.ransack params[:q]
+    @pagy, @tours = pagy @q.result(distinct: true).by_id(get_tour_ids),
+                         items: Settings.pagy.tour.admin.number
   end
 
   def get_tour_ids
