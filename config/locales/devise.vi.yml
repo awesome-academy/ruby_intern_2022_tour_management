@@ -39,7 +39,7 @@ vi:
       signed_up: "Chào mừng! bạn đã tạo tài khoản thành công."
       signed_up_but_inactive: "Bạn đã tạo tài khoản thành công, nhưng bạn chưa thể đăng nhập vì tài khoản chưa được kích hoạt."
       signed_up_but_locked: "Bạn đã tạo tài khoản thành công, nhưng bạn chưa thể đăng nhập vì tài khoản đã bị khóa."
-      signed_up_but_unconfirmed: "Một tin nhắn với link xác nhận đã được gửi đến email của bạn, vui lòng click vào link dưới."
+      signed_up_but_unconfirmed: "Một tin nhắn với link xác nhận đã được gửi đến email của bạn."
       update_needs_confirmation: "Chúng tôi cần xác nhận địa chỉ email mới của bạn, vui lòng kiểm tra email."
       updated: "Tài khoản của bạn đã được cập nhật thành công."
       updated_but_not_signed_in: "Tài khoản của bạn đã được cập nhật thành công, vui lòng đăng nhập lại."
