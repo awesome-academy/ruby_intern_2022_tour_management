@@ -1,4 +1,29 @@
 en:
+  devise:
+    confirmations:
+      new:
+        text: "Resend confirmation instructions"
+        email: "Email"
+        submit: "Resend confirmation instructions"
+    mailer:
+      confirmation_instructions:
+        welcome: "Welcome"
+        text: "You can confirm your account email through the link below:"
+        confirm: "Confirm my account"
+    shared:
+      links:
+        log_in: "Log in"
+        sign_up: "Sign up"
+        resend: "Didn't receive confirmation instructions?"
+    registrations:
+      new:
+        sign_up: "Sign up"
+        email: "Email"
+        password: "Password"
+        password_confirmation: "Password confirmation"
+        min_char: "characters minimum"
+        name: "Name"
+        phone_number: "Phone number"
   book_mailer:
     booking_confirmation:
       subject: "Booking Confirmation"
