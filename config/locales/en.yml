@@ -1,20 +1,54 @@
 en:
+  passwords:
+    update:
+      old_password: "New password must different with old password"
+      success: "Success reset passwod"
+      wrong_format: "Wrong password format or confirmation password"
   devise:
+    unlocks:
+      new:
+        title: "Resend unlock instructions"
+        email: "Email"
+        submit: "Resend unlock instructions"
+    passwords:
+      new:
+        title: "Forgot password"
+        email: "Email"
+        submit: "Send email"
+      edit:
+        title: "Change your password"
+        new_password: "New password"
+        min_char: "characters minimum"
+        confirmation: "Confirm new password"
+        submit: "Change my password"
     confirmations:
       new:
         text: "Resend confirmation instructions"
         email: "Email"
         submit: "Resend confirmation instructions"
     mailer:
+      unlock_instructions:
+        hello: "Hello"
+        text_1: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+        text_2: "Click the link below to unlock your account:"
+        unlock: "Unlock my account"
       confirmation_instructions:
         welcome: "Welcome"
         text: "You can confirm your account email through the link below:"
         confirm: "Confirm my account"
+      reset_password_instructions:
+        hello: "Hello"
+        text: "Someone has requested a link to change your password. You can do this through the link below."
+        link_text: "Change my password"
+        desc_1: "If you didn't request this, please ignore this email."
+        desc_2: "Your password won't change until you access the link above and create a new one."
     shared:
       links:
         log_in: "Log in"
         sign_up: "Sign up"
         resend: "Didn't receive confirmation instructions?"
+        forgot_password: "Forgot your password?"
+        unlock: "Didn't receive unlock instructions?"
     registrations:
       new:
         sign_up: "Sign up"
@@ -52,6 +86,7 @@ en:
       no_tours_msg: "No tours found."
   images_count_error: "Total images must greater than "
   time_schedule_error: "End date must greater than start date"
+  password_format_error: "wrong password format"
   duplicate_schedule: "You booked schedule"
 
   pending: "pending"
@@ -67,6 +102,7 @@ en:
       booking_success: "Schedule booked"
       booking_fail: "Can't book this schedule"
       not_found: "Can't find schedule"
+      not_authorized: "you're not authorized to access this page"
     show:
       title: "Bookings requested"
       schedule_name: "Schedule title"
@@ -76,6 +112,7 @@ en:
       status: "Status"
       error: "Have a error when get yours schedules"
       no_bookings: "You don't have any bookings"
+      not_authorized: "you're not authorized to access this page"
     booking:
       cancel: "Cancel"
     destroy:

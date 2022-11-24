@@ -5,6 +5,10 @@ footer:
 
 user:
   email_regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  password_regex:
+    constain_digit: !ruby/regexp /\d+/
+    constain_lowcase: !ruby/regexp /[a-z]+/
+    constain_upercase: !ruby/regexp /[A-Z]+/
   length:
     name_max: 50
     email_max: 255

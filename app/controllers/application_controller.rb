@@ -2,6 +2,12 @@ class ApplicationController < ActionController::Base
   include Pagy::Backend
 
   rescue_from ActiveRecord::RecordNotFound, with: :not_found
+  rescue_from CanCan::AccessDenied do |_exception|
+    respond_to do |format|
+      format.json{head :forbidden}
+      format.html{redirect_to root_path, alert: t(".not_authorized")}
+    end
+  end
 
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
