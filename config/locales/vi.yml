@@ -89,6 +89,7 @@ vi:
       end_date: "Ngày kết thúc"
       not_found_schedule: "Lịch trình cho tour này không tồn tại"
       no_schedules: "Không có lịch trình"
+      not_found: "Lịch trình cho tour này không tồn tại"
     tour_schedule:
       book: "Đặt lịch trình"
       booked: "Đã đặt lịch trình"
@@ -149,6 +150,9 @@ vi:
       comment: "Bình luận"
   admin:
     bookings:
+      bookings:
+      chart_status:
+        booking_status: "Biểu đồ trạng thái đặt tour"
       update:
         success_update: "Cập nhật thành công"
         fail_update: "Cập nhật thất bại"
@@ -282,3 +286,4 @@ vi:
         log_out: "Đăng xuất"
         tour_list: "Danh sách tour"
         add: "Thêm mới"
+        booking_chart: "Biểu đồ trạng thái đặt tour"

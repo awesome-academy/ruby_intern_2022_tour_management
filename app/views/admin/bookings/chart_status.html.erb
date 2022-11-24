@@ -1,0 +1,6 @@
+<h1 class="text-primary text-center mt-5 mb-2"><%= t ".booking_status" %></h1>
+<%= line_chart Booking.group(:status)
+                      .by_status([Settings.booking.status.accept,
+                                  Settings.booking.status.cancel])
+                      .updated_at_glt(DateTime.now - 15.days)
+                      .group_by_day(:updated_at).count %>

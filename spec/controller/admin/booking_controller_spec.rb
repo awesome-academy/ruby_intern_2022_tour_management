@@ -20,6 +20,19 @@ RSpec.describe Admin::BookingsController, type: :controller do
     it "should render booking index template" do
       expect(response).to render_template "admin/bookings/index"
     end
+
+    context "when have chart params" do
+      subject { get :index, params:{chart: Settings.chart.booking_status.params} }
+
+      it "shoud have OK status" do
+        expect(subject).to have_http_status 200
+      end
+
+      it "should show template" do
+        expect(subject).to render_template "admin/bookings/chart_status"
+      end
+    end
+
   end
 
   describe "PATCH #update" do

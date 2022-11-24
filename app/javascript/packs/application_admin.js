@@ -5,6 +5,8 @@ import 'channels'
 require('jquery')
 import 'cocoon'
 import 'bootstrap'
+import 'chartkick/chart.js'
+import 'chartkick/highcharts'
 
 Rails.start()
 Turbolinks.start()

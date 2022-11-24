@@ -5,9 +5,13 @@ class Admin::BookingsController < Admin::BaseController
   before_action :load_list_booking, only: :index
 
   def index
-    respond_to do |format|
-      format.html
-      format.js
+    if params[:chart].blank?
+      respond_to do |format|
+        format.html
+        format.js
+      end
+    else
+      render :chart_status
     end
   end
 
@@ -24,7 +28,7 @@ class Admin::BookingsController < Admin::BaseController
   private
 
   def load_list_booking
-    @q = Booking.ransack params[:q]
+    @q = Booking.includes(:user, tour_schedule: :tour).ransack params[:q]
     @pagy, @bookings = pagy @q.result(distinct: true).order("status"),
                             items: Settings.pagy.booking.admin.number
   end

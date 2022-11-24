@@ -20,8 +20,9 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @bookings = current_user.bookings.includes(:tour_schedule)
-                            .order_by_status
+    @pagy, @bookings = pagy current_user.bookings.includes(tour_schedule: :tour)
+                                        .order_by_status,
+                            items: Settings.pagy.booking.admin.number
   end
 
   def destroy
