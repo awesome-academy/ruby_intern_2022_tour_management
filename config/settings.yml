@@ -50,3 +50,7 @@ tour:
 review:
   comment:
     max_length: 7000
+
+chart:
+  booking_status:
+    params: 1

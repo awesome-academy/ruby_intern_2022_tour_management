@@ -44,6 +44,7 @@ class Booking < ApplicationRecord
   scope :by_status, ->(status){where status: status if status.present?}
   scope :by_user_id, ->(id){where user_id: id}
   scope :order_by_status, ->{order :status}
+  scope :updated_at_glt, ->(days){where "updated_at >= ?", days}
 
   def show_status
     I18n.t(".#{status}")

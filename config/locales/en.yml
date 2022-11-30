@@ -91,6 +91,7 @@ en:
       end_date: "End date"
       not_found_schedule: "We don't have schedule for this tour"
       no_schedules: "No schedule available"
+      not_found: "We don't have schedule for this tour"
     tour_schedule:
       book: "Book schedule"
       booked: "Booked schedule"
@@ -151,6 +152,8 @@ en:
       comment: "Comment"
   admin:
     bookings:
+      chart_status:
+        booking_status: "Booking status chart"
       update:
         success_update: "Successful update"
         fail_update: "Failly update"
@@ -270,3 +273,4 @@ en:
         booking_list: "Booking requests"
         log_out: "Log out"
         add: "Add"
+        booking_chart: "Booking status chart"

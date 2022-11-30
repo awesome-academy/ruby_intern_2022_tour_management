@@ -114,7 +114,7 @@ RSpec.describe Admin::ToursController, type: :controller do
     end
   end
 
-  describe "DELETER #destroy" do
+  describe "DELETE #destroy" do
     context "when successful delete" do
       before do
         allow_any_instance_of(Tour).to receive(:has_bookings?).and_return false
