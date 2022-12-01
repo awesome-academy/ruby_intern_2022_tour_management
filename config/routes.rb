@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => "/sidekiq"
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#index"
-    devise_for :users
+    devise_for :users, controllers: {passwords: "passwords"}
     resources :reviews, only: :create
     resource :bookings, only: %i(create show)
     resources :bookings, only: :destroy

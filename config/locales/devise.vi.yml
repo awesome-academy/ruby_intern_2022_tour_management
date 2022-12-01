@@ -8,7 +8,7 @@ vi:
       already_authenticated: "Bạn đã đăng nhập"
       inactive: "Tài khoản của bạn chưa được xác nhận"
       invalid: "Sai %{authentication_keys} hoặc mật khẩu."
-      locked: "Tài khoản của bạn đã bị xóa"
+      locked: "Tài khoản của bạn đã bị khóa"
       last_attempt: "Bạn có một lần đăng nhập nữa trước khi tài khoản của bạn bị khóa"
       not_found_in_database: "Sai %{authentication_keys} hoặc mật khẩu."
       timeout: "Phiên làm việc của bạn đã hết hạn, vui lòng đăng nhập lại."
