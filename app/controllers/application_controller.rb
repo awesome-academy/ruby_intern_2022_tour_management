@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
   def get_tours
     @q = Tour.includes(:tour_schedules).ransack params[:q]
     @pagy, @tours = pagy @q.result(distinct: true).by_id(get_tour_ids),
-                         items: Settings.pagy.tour.admin.number
+                         items: Settings.pagy.tour.user.number
   end
 
   def get_tour_ids
