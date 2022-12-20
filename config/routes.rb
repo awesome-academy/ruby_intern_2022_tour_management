@@ -16,5 +16,10 @@ Rails.application.routes.draw do
       resources :tours
       resources :bookings, only: %i(index update)
     end
+    namespace :api do
+      namespace :v1 do
+        root "tours#index"
+      end
+    end
   end
 end

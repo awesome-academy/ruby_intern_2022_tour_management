@@ -1,21 +1,23 @@
 User.create!(name: "Phan Quang",
              email: "abc@gmail.com",
-             password: "123456",
-             password_confirmation: "123456",
+             password: "123456Qq",
+             password_confirmation: "123456Qq",
              role: 1,
+             confirmed_at: DateTime.now,
              phone_number: "0034232342",
              info: "admin here")
 
 10.times do |n|
-  name = Faker.name
+  name = Faker::Name.name
   email = "abc#{n}@gmail.com"
-  password = "123456"
+  password = "123456Qq"
 
   User.create!(name: name,
                email: email,
                password: password,
                password_confirmation: password,
                phone_number: "0034232342",
+               confirmed_at: DateTime.now,
                info: "this is a info")
 end
 
