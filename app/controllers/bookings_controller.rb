@@ -19,12 +19,6 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
-  def show
-    @pagy, @bookings = pagy current_user.bookings.includes(tour_schedule: :tour)
-                                        .order_by_status,
-                            items: Settings.pagy.booking.admin.number
-  end
-
   def destroy
     if @booking.pending? && @booking.destroy
       flash[:success] = t ".success_destroy"
