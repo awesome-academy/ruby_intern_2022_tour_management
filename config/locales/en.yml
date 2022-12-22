@@ -1,4 +1,7 @@
 en:
+  not_auth: "Not Authenticated"
+  invalid_auth: "Invalid Username/password"
+  error_role: "You don't have role for this action"
   passwords:
     update:
       old_password: "New password must different with old password"

@@ -19,6 +19,8 @@ Rails.application.routes.draw do
     namespace :api do
       namespace :v1 do
         root "tours#index"
+        post "/authentication", to: "authentication#authenticate_user"
+        get "/bookings", to: "bookings#index"
       end
     end
   end
