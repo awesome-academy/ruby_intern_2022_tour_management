@@ -1,4 +1,7 @@
 vi:
+  not_auth: "Chưa xác thực"
+  invalid_auth: "Sai tài khoản/mật khẩu"
+  error_role: "Bạn không có quyền sử dụng api này"
   passwords:
     update:
       old_password: "Mật khẩu mới không được trùng mật khẩu cũ"
