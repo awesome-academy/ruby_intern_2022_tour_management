@@ -218,6 +218,8 @@ vi:
         active: "Hoạt động"
         created_date: "Ngày tạo"
         updated_at: "Ngay cap nhat"
+        data_importing: "Nhập dữ liệu từ file"
+        importing_submit: "Nhập"
     shared:
       search_booking:
         user_name: "Nhập tên người dùng"
@@ -248,6 +250,11 @@ vi:
         add_schedule: "Thêm lịch trình"
         create: "Tạo tour"
     tours:
+      import:
+        success: "Nhập dữ liệu thành công"
+        record: "thông tin tour"
+        fail: "Nhập dữ liệu thất bại"
+        not_allow_file: "Bạn phải sử dụng file excel để nhập dữ liệu"
       hide_tour:
         passed: "Ẩn tour thành công."
         failed: "Không thể ẩn tour hiện tại"

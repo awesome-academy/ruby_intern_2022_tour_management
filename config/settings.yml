@@ -58,3 +58,7 @@ review:
 chart:
   booking_status:
     params: 1
+
+file:
+  extension:
+    allow: [".xlsx", ".xlsm", ".xls", ".ods"]

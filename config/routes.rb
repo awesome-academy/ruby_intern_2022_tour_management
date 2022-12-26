@@ -13,7 +13,9 @@ Rails.application.routes.draw do
     resources :tour_schedules, only: :show
     namespace :admin do
       root "static_pages#index"
-      resources :tours
+      resources :tours do
+        collection {post :import}
+      end
       resources :bookings, only: %i(index update)
     end
     namespace :api do

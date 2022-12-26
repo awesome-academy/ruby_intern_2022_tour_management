@@ -16,7 +16,7 @@ class Ability
     return if user.normal?
 
     cannot :destroy, Booking
-    can %i(create update destroy), Tour
+    can %i(create update destroy import), Tour
     can %i(create update destroy), TourSchedule
     can :update, Booking
   end
