@@ -1,7 +1,7 @@
 class Admin::ToursController < Admin::BaseController
   load_and_authorize_resource
 
-  before_action :find_tour_by_id, except: %i(new create)
+  before_action :find_tour_by_id, except: %i(new create import)
 
   def new
     @tour = Tour.new
@@ -45,6 +45,18 @@ class Admin::ToursController < Admin::BaseController
     redirect_to admin_root_path
   end
 
+  def import
+    return if checking_not_allow_file params[:file]
+
+    record_number = Tour.import_file params[:file]
+    if record_number
+      flash[:success] = "#{t '.success'} #{record_number} #{t '.record'}"
+    else
+      flash[:danger] = t ".fail"
+    end
+    redirect_to admin_root_path
+  end
+
   private
 
   def redirect_after_update
@@ -67,5 +79,16 @@ class Admin::ToursController < Admin::BaseController
     end
 
     tour_params
+  end
+
+  def checking_not_allow_file file
+    if Settings.file.extension
+               .allow.exclude? File.extname(file.original_filename)
+      flash[:danger] = t ".not_allow_file"
+      redirect_to admin_root_path
+      return true
+    end
+
+    false
   end
 end

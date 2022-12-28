@@ -220,6 +220,8 @@ en:
         active: "Active"
         created_date: "Created"
         updated_at: "Updated at"
+        data_importing: "Import data"
+        importing_submit: "Submit"
     shared:
       search_booking:
         user_name: "Enter user name"
@@ -242,6 +244,11 @@ en:
         submit_btn: "Save"
         cancel_btn: "Cancel"
     tours:
+      import:
+        success: "successfully imported data"
+        record: "tour information"
+        fail: "import failed data"
+        not_allow_file: "you must submit excel file to import!"
       hide_tour:
         passed: "Successfully hidden."
         failed: "Failed to update tour status."
